@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
-<title>QSL — the volatility sequence (three slides, real 2026 data)</title><style>
+<title>QSL — volatility, the five-slide sequence (May 2026 data)</title><style>
 :root{--paper:#FDFBF6;--paper-3:#ECE6D6;--rule:#D9D2BE;--ink-3:#595447;--ink-2:#3A3833;--ink-1:#1A1A1A;
 --accent:#B8902C;--accent-ink:#7A5C15;--data-2:#4A6B8A;
 --fd:"Source Serif 4","Source Serif Pro",Georgia,serif;--fb:"Inter",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
@@ -19,26 +19,38 @@ h1{font:500 46px/1.1 var(--fd);color:var(--ink-1);margin:8px 0 0}
 .points li{position:relative;font:400 20px/1.5 var(--fb);color:var(--ink-2);padding:0 0 20px 24px}
 .points li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
 .points strong{color:var(--ink-1);font-weight:600}
+.points-wide{max-width:1050px}
+.points-wide li{padding-bottom:38px;font-size:22px}
 .legend{display:flex;gap:22px;margin-top:10px;font:400 15px var(--fb);color:var(--ink-2)}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:-1px}
 .blab{font:600 14px var(--fb);color:var(--ink-2);margin:6px 0 4px}
-.tiles{display:grid;grid-template-rows:repeat(3,1fr);gap:18px;margin-top:8px}
+.tiles{display:grid;grid-template-rows:repeat(2,1fr);gap:18px;margin-top:8px}
 .tile{border-left:3px solid var(--accent);padding:10px 0 10px 22px}
 .tile .num{font:500 52px var(--fd);color:var(--ink-1)}
 .tile .lab{font:600 14px var(--fb);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin-top:2px}
 .tile .sub{font:400 15px var(--fb);color:var(--ink-3);margin-top:3px}
+.qbox{border-left:3px solid var(--accent);background:#F6F1E4;padding:20px 26px;margin-top:6px}
+.qbox .qlab{font:600 13px var(--fb);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+.qbox .q{font:500 25px/1.35 var(--fd);color:var(--ink-1);margin-top:8px}
+.formula{border-left:3px solid var(--accent);background:#F6F1E4;padding:26px 30px;margin-top:4px}
+.formula .f{font:500 34px var(--fd);color:var(--ink-1)}
+.formula .syms{margin-top:18px;font:400 17px/1.7 var(--fb);color:var(--ink-2)}
+.formula .syms b{font-family:var(--fd);font-weight:600;color:var(--ink-1)}
 </style></head><body>
 
-<div class="which">SLIDE 1 — the demonstration (May 2026, AAPL vs TSLA)</div>
+<div class="which">SLIDE 1 — SCENARIO</div>
 <section class="slide"><div class="logo">QSL</div><div class="pad">
-<div class="eyebrow">Risk management</div><h1>Volatility</h1><div class="goldrule"></div>
+<div class="eyebrow">Risk management</div><h1>Two stocks, one return</h1><div class="goldrule"></div>
 <div class="grid2">
+<div>
 <ul class="points">
 <li><strong>AAPL</strong> ended May 2026 up 11.5%.</li>
 <li><strong>TSLA</strong> ended the same month up 11.5% as well — the same return to within one hundredth of a percent.</li>
-<li>On a typical day, TSLA moved 2.1% up or down. AAPL moved 0.9%.</li>
-<li>Volatility measures the size of those day-to-day moves. In May 2026, TSLA&rsquo;s volatility was almost three times AAPL&rsquo;s.</li>
+<li>The chart shows the path each stock took to that result.</li>
 </ul>
+<div class="qbox"><div class="qlab">Before the next slide</div>
+<div class="q">Were the two investments equally risky? If not — how would you put a number on the difference?</div></div>
+</div>
 <div><svg viewBox="0 0 1000 420" width="100%" style="border-left:1px solid var(--paper-3);border-bottom:1px solid var(--paper-3)"><line x1="0" y1="366" x2="1000" y2="366" stroke="#ECE6D6"/><text x="6" y="360" font-size="15" fill="#595447" font-family="JetBrains Mono,monospace">100</text><line x1="0" y1="244" x2="1000" y2="244" stroke="#ECE6D6"/><text x="6" y="238" font-size="15" fill="#595447" font-family="JetBrains Mono,monospace">105</text><line x1="0" y1="121" x2="1000" y2="121" stroke="#ECE6D6"/><text x="6" y="115" font-size="15" fill="#595447" font-family="JetBrains Mono,monospace">110</text>
 <polyline points="0.0,366.5 52.6,395.5 105.3,331.1 157.9,301.9 210.5,302.5 263.2,251.0 315.8,254.2 368.4,235.6 421.1,200.0 473.7,205.8 526.3,188.0 578.9,209.0 631.6,199.1 684.2,170.3 736.8,146.3 789.5,112.7 842.1,117.0 894.7,94.9 947.4,80.3 1000.0,84.3" fill="none" stroke="#4A6B8A" stroke-width="2.6"/>
 <polyline points="0.0,366.5 52.6,355.8 105.3,375.6 157.9,316.8 210.5,234.8 263.2,130.8 315.8,26.2 368.4,98.8 421.1,24.5 473.7,36.9 526.3,169.1 578.9,246.1 631.6,283.0 684.2,200.4 736.8,196.7 789.5,145.5 842.1,97.9 894.7,55.4 947.4,44.4 1000.0,84.1" fill="none" stroke="#B8902C" stroke-width="2.6"/></svg>
@@ -47,17 +59,57 @@ h1{font:500 46px/1.1 var(--fd);color:var(--ink-1);margin:8px 0 0}
 <span style="color:var(--ink-3)">Both start at 100 · daily closes · May 2026</span></div></div>
 </div></div>
 <div class="chrome-l">Source: Yahoo Finance, dividend-adjusted daily closes · May 1 – 29 2026 · AAPL, TSLA · indexed to 100</div>
-<div class="chrome-r">03 / 09</div></section>
+<div class="chrome-r">01 / 05</div></section>
 
-<div class="which">SLIDE 2 — the calculation</div>
+<div class="which">SLIDE 2 — INTUITION</div>
 <section class="slide"><div class="logo">QSL</div><div class="pad">
-<div class="eyebrow">Risk management</div><h1>Calculating volatility</h1><div class="goldrule"></div>
+<div class="eyebrow">Risk management</div><h1>The typical size of a daily move</h1><div class="goldrule"></div>
 <div class="grid2">
 <ul class="points">
-<li>Start with the returns for the period. For daily volatility, that is each day&rsquo;s percentage change in value.</li>
-<li>Find the average of those returns.</li>
-<li>Volatility is the <strong>standard deviation</strong> of the returns: one number for how far a typical day sits from that average.</li>
-<li>In May 2026, the standard deviation of AAPL&rsquo;s daily returns was 0.94%. TSLA&rsquo;s was 2.49%. Those are their daily volatilities for the month.</li>
+<li>One natural answer: compare the worst single day. In May 2026, TSLA&rsquo;s worst day was a loss of 4.75%. AAPL&rsquo;s was a loss of 1.18%.</li>
+<li>A single day is one event, not a pattern. A stock could have one bad day in an otherwise calm month.</li>
+<li>The measure we want describes every day in the period: the <strong>typical size of a daily move</strong>.</li>
+<li>On a typical day in May 2026, TSLA moved 2.1% up or down. AAPL moved 0.9%. The two stocks differed in risk, not in return.</li>
+</ul>
+<div class="tiles">
+<div class="tile"><div class="num">2.1%</div><div class="lab">Typical daily move — TSLA</div><div class="sub">Average size of the daily change, May 2026</div></div>
+<div class="tile"><div class="num">0.9%</div><div class="lab">Typical daily move — AAPL</div><div class="sub">Average size of the daily change, May 2026</div></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: Yahoo Finance, dividend-adjusted daily closes · May 1 – 29 2026 · AAPL, TSLA</div>
+<div class="chrome-r">02 / 05</div></section>
+
+<div class="which">SLIDE 3 — DEFINITION</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Risk management</div><h1>Volatility</h1><div class="goldrule"></div>
+<div class="grid2" style="margin-top:56px">
+<ul class="points">
+<li><strong>Volatility</strong> is the typical size of the moves in an investment&rsquo;s value over a chosen period.</li>
+<li>The formal measure is the <strong>standard deviation</strong> of the returns for that period.</li>
+<li>Read the formula as a sentence: how far a typical return sits from the average return.</li>
+<li>The next slide applies it to AAPL and TSLA.</li>
+</ul>
+<div class="formula">
+<div class="f">&sigma; = &radic;(&nbsp;&Sigma;&thinsp;(r<sub>i</sub> &minus; r&#772;)&sup2; &frasl; (N &minus; 1)&nbsp;)</div>
+<div class="syms">
+<b>r<sub>i</sub></b> — each period&rsquo;s return, for example one day&rsquo;s percentage change<br>
+<b>r&#772;</b> — the average of those returns<br>
+<b>N</b> — how many returns the period contains<br>
+<b>&sigma;</b> — the volatility: one number for the whole period
+</div>
+</div>
+</div></div>
+<div class="chrome-r">03 / 05</div></section>
+
+<div class="which">SLIDE 4 — WORKED EXAMPLE</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Risk management</div><h1>Calculating volatility for AAPL and TSLA</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>Take each trading day&rsquo;s percentage change in value. The bars show all twenty days for each stock, on the same scale.</li>
+<li>Find the average daily return, and each day&rsquo;s distance from that average.</li>
+<li>The standard deviation of those daily returns is the daily volatility. For May 2026: <strong>AAPL 0.94%, TSLA 2.49%</strong>.</li>
+<li>TSLA&rsquo;s volatility was more than two and a half times AAPL&rsquo;s. With one number per investment, the risk of any two investments can be compared directly.</li>
 </ul>
 <div>
 <div class="blab">AAPL — daily returns, May 2026</div>
@@ -68,24 +120,18 @@ h1{font:500 46px/1.1 var(--fd);color:var(--ink-1);margin:8px 0 0}
 </div>
 </div></div>
 <div class="chrome-l">Source: Yahoo Finance, dividend-adjusted daily closes · May 1 – 29 2026 · AAPL, TSLA</div>
-<div class="chrome-r">04 / 09</div></section>
+<div class="chrome-r">04 / 05</div></section>
 
-<div class="which">SLIDE 3 — the time scales</div>
+<div class="which">SLIDE 5 — CONSIDERATIONS</div>
 <section class="slide"><div class="logo">QSL</div><div class="pad">
-<div class="eyebrow">Risk management</div><h1>Daily, monthly and annual volatility</h1><div class="goldrule"></div>
-<div class="grid2">
-<ul class="points">
-<li>Volatility carries the time scale of the returns it is computed from. Daily returns give daily volatility; monthly returns give monthly volatility.</li>
-<li>The professional convention is to quote volatility per year. The annualized figure scales the daily one up by the square root of the number of trading days in a year — a factor of about sixteen.</li>
-<li>The choice sets what you see. Daily volatility describes the day-to-day swings an owner sees. Monthly volatility smooths those out. The annualized figure is the standard number for comparing investments.</li>
+<div class="eyebrow">Risk management</div><h1>What volatility does and does not tell you</h1><div class="goldrule"></div>
+<ul class="points points-wide" style="margin-top:52px">
+<li><strong>Volatility counts moves in both directions.</strong> A sharp rise raises it as much as a sharp fall. It measures the size of moves, not falling prices.</li>
+<li><strong>It carries the time scale of its returns.</strong> Daily returns give daily volatility. The convention for comparing investments is the annualized figure: the daily number scaled by the square root of 252 trading days, a factor of about sixteen.</li>
+<li><strong>It describes the period it was measured on.</strong> May&rsquo;s volatility is a fact about May. Volatility changes over time, and calm months can be followed by rough ones.</li>
+<li><strong>One number cannot show the shape of the moves.</strong> Steady daily swings and rare large drops can produce the same volatility. Later units measure that difference.</li>
 </ul>
-<div class="tiles">
-<div class="tile"><div class="num">1.08%</div><div class="lab">Daily volatility</div><div class="sub">SPY, from daily returns, 2021–2025</div></div>
-<div class="tile"><div class="num">4.4%</div><div class="lab">Monthly volatility</div><div class="sub">SPY, from monthly returns, 2021–2025</div></div>
-<div class="tile"><div class="num">&asymp;17%</div><div class="lab">Annualized volatility</div><div class="sub">SPY, daily figure scaled by &radic;252</div></div>
 </div>
-</div></div>
-<div class="chrome-l">Source: Yahoo Finance, dividend-adjusted closes · Jan 2021 – Dec 2025 · SPY</div>
-<div class="chrome-r">05 / 09</div></section>
+<div class="chrome-r">05 / 05</div></section>
 
 </body></html>
