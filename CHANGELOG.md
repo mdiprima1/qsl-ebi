@@ -41,3 +41,10 @@ Housekeeping release — the repository now documents the current architecture c
 Repository renamed **qsl-mi → qsl-ebife** (Marco directive), matching the course acronym after the course rename to "Evidence-Based Investing for Everyone" (2026-07-24). GitHub redirects the old URLs, including raw URLs; consumers should move to the new base `https://raw.githubusercontent.com/mdiprima1/qsl-ebife/main/...`.
 - Package brand updated in README, CHANGELOG, CLAUDE.md ("QS Lab MI Research Package" → "QS Lab EBIFE Research Package"); PACKAGE-SPEC delivery-contract URL updated.
 - Strategy files untouched by design: `ben-spy.py` still carries the old brand in its header comment because changing any strategy byte changes its fingerprint. The comment will be updated in the next substantive BEN-SPY release.
+
+## 1.5.0 — 2026-07-25
+The repository becomes the full public study pack: two new zones beside `strategies/`.
+- Added `modules/` — the structured course-content library: chapter folders mirroring the course syllabus (ch1–ch5 + `_unassigned/`), one self-contained module per concept (slides, data, narration, manifest), status lifecycle draft → review → approved → in-unit. Operator guide at `modules/README.md`, including the five-slide concept-introduction template.
+- Added `workshop/` — the work-in-progress space where course material is created before promotion into `modules/`. Three rules (one folder per piece, a NOTE.md per folder, every number from a data file); otherwise unstructured by design. Guide at `workshop/README.md`.
+- First workshop item: `workshop/volatility-sequence/` — the three-slide volatility sequence (2026-07-24) with its AAPL/TSLA May-2026 data; NOTE.md records template gaps and the missing SPY data file.
+- README and CLAUDE.md rewritten as three-zone documents. `strategies/` and its integrity rules unchanged.

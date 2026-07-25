@@ -1,8 +1,18 @@
 # Instructions for AI agents working in this repository
 
-You are in the **QS Lab EBIFE Research Package** — the canonical source of the strategy packages for the QSL course "Evidence-Based Investing for Everyone." Read `README.md` for the architecture and `PACKAGE-SPEC.md` for the package format before changing anything.
+You are in the **QS Lab EBIFE Research Package** — the public study pack of the QSL course "Evidence-Based Investing for Everyone." Read `README.md` for the architecture before changing anything.
 
-## The one rule that outranks everything
+The repository has three zones with different rules. **Know which zone you are in:**
+
+| Zone | What it is | Rules |
+|---|---|---|
+| `strategies/` | Checksummed strategy packages, delivered byte-for-byte | This file, below, + `PACKAGE-SPEC.md`. Strictest zone. |
+| `modules/` | The structured course-content library | `modules/README.md` (template, manifests, status lifecycle) |
+| `workshop/` | Work-in-progress space for creating course material | `workshop/README.md` (three rules, otherwise free) |
+
+If you were pointed here to build or brainstorm course material, work in `workshop/` and read its README first. Never touch `strategies/` in passing.
+
+## The one rule that outranks everything (strategies/ zone)
 
 **The bytes are the product.** Students receive these files byte-for-byte, verified by SHA-256 against each package's `manifest.json`. Therefore:
 

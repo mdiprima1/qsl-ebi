@@ -1,8 +1,12 @@
 # QS Lab EBIFE Research Package
 
-**Version 1.3.2** · The canonical strategy packages for the QSL course **Evidence-Based Investing for Everyone** (Quantitative Strategy Lab, quantstrategylab.com).
+**Version 1.5.0** · The public study pack of the QSL course **Evidence-Based Investing for Everyone** (Quantitative Strategy Lab, quantstrategylab.com): the canonical strategy packages and the course-content library.
 
-This repository is a **source of truth, not an app**. Every strategy taught in the course lives here as a fixed, versioned, checksummed package. The course platform delivers these packages to students byte-for-byte — the code is never generated, retyped, or altered anywhere between this repository and the student's clipboard.
+This repository is a **source of truth, not an app**, in three zones:
+
+- **`strategies/`** — every strategy taught in the course, as a fixed, versioned, checksummed package. The course platform delivers these packages to students byte-for-byte — the code is never generated, retyped, or altered anywhere between this repository and the student's clipboard. Governed by `PACKAGE-SPEC.md`.
+- **`modules/`** — the structured course-content library: one self-contained folder per concept (slides, data, narration), organized by course chapter and assembled into course units later. Governed by `modules/README.md`.
+- **`workshop/`** — the work-in-progress space where course material is created before promotion into `modules/`. Deliberately unstructured. Governed by `workshop/README.md`.
 
 ## How delivery works
 
@@ -36,6 +40,8 @@ strategies/
     ben-spy.py        the canonical strategy code (QuantConnect, Python)
     ben-spy.pdf       the student-facing description
     manifest.json     id, name, version, SHA-256 fingerprints of both files
+modules/              course-content library: ch1…ch5 chapter folders, one module per concept
+workshop/             work-in-progress space; material promotes into modules/ when mature
 VERSION               package version (semver)
 CHANGELOG.md          every change, versioned
 PACKAGE-SPEC.md       the package format and release process
