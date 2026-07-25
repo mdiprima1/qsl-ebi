@@ -45,6 +45,6 @@ A strategy package is one folder under `strategies/`, named with the lowercase f
 
 ## Delivery contract (what consumers rely on)
 
-- Raw URLs are stable: `https://raw.githubusercontent.com/mdiprima1/qsl-mi/main/strategies/<id>/<file>`.
+- Raw URLs are stable: `https://raw.githubusercontent.com/mdiprima1/qsl-ebife/main/strategies/<id>/<file>`.
 - The browser (or any consumer) MUST verify the code file's SHA-256 against the manifest before use; on mismatch, refuse delivery.
 - The code file is delivered byte-for-byte. No consumer may reformat, annotate, or "improve" it.

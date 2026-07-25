@@ -1,6 +1,6 @@
 # Instructions for AI agents working in this repository
 
-You are in the **QS Lab MI Research Package** — the canonical source of the strategy packages for the QSL course "Evidence-Based Investing for Everyone." Read `README.md` for the architecture and `PACKAGE-SPEC.md` for the package format before changing anything.
+You are in the **QS Lab EBIFE Research Package** — the canonical source of the strategy packages for the QSL course "Evidence-Based Investing for Everyone." Read `README.md` for the architecture and `PACKAGE-SPEC.md` for the package format before changing anything.
 
 ## The one rule that outranks everything
 

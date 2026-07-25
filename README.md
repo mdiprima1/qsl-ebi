@@ -1,4 +1,4 @@
-# QS Lab MI Research Package
+# QS Lab EBIFE Research Package
 
 **Version 1.3.2** · The canonical strategy packages for the QSL course **Evidence-Based Investing for Everyone** (Quantitative Strategy Lab, quantstrategylab.com).
 

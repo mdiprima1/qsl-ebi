@@ -1,4 +1,4 @@
-# Changelog — QS Lab MI Research Package
+# Changelog — QS Lab EBIFE Research Package
 
 All notable changes to this package. The version in `VERSION` is the package version installed by the install prompt.
 
@@ -36,3 +36,8 @@ Housekeeping release — the repository now documents the current architecture c
 
 ## 1.3.2 — 2026-07-17
 - Added the MIT License. The free-course packages are open; the license maximizes trust and lets students use and adapt what they learn from.
+
+## 1.4.0 — 2026-07-25
+Repository renamed **qsl-mi → qsl-ebife** (Marco directive), matching the course acronym after the course rename to "Evidence-Based Investing for Everyone" (2026-07-24). GitHub redirects the old URLs, including raw URLs; consumers should move to the new base `https://raw.githubusercontent.com/mdiprima1/qsl-ebife/main/...`.
+- Package brand updated in README, CHANGELOG, CLAUDE.md ("QS Lab MI Research Package" → "QS Lab EBIFE Research Package"); PACKAGE-SPEC delivery-contract URL updated.
+- Strategy files untouched by design: `ben-spy.py` still carries the old brand in its header comment because changing any strategy byte changes its fingerprint. The comment will be updated in the next substantive BEN-SPY release.
