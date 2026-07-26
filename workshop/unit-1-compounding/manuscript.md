@@ -14,7 +14,7 @@ One promise about the numbers. Every figure in this unit is computed, not quoted
 
 ## Two savers, ten years apart
 
-Two people each invest $300 a month in the same portfolio. The portfolio earns 7.7% a year — the average annual return, from 2005 to 2026, of a classic 60/40 portfolio: 60% stocks, 40% bonds. One saver starts at 25. The other starts at 35. Both keep going until 65.
+Two people each invest $300 a month in the same portfolio — the same collection of investments. The portfolio earns 7.7% a year — the average annual return, from 2005 to 2026, of a classic 60/40 portfolio: 60% stocks, 40% bonds. One saver starts at 25. The other starts at 35. Both keep going until 65.
 
 By 65, the early starter has deposited $144,000. The late starter has deposited $108,000 — 25% less. Before reading on, commit to a guess: the late starter put in 25% less money. Does he end about 25% behind — or further?
 
@@ -50,7 +50,7 @@ The same formula also runs backward. If you know the ending value you need and t
 
 The formula has two levers, and it pays to see each one isolated.
 
-**Hold the deposits fixed; change the rate.** Save $500 a month for forty years. At 2.0% — a savings account — the deposits become $365,000. At 7.7%, the 60/40 portfolio's average over 2005–2026, they become $1,500,000. At 9.9%, the S&P 500's average over the same period, they become $2,700,000. The saving behavior in the three rows is identical: same $500, same forty years, $240,000 deposited in each case. The return alone separates the three endings by a factor of more than seven. This is why the return number — and whether it can be trusted — is the central object of this course.
+**Hold the deposits fixed; change the rate.** Save $500 a month for forty years. At 2.0% — a savings account — the deposits become $365,000. At 7.7%, the 60/40 portfolio's average over 2005–2026, they become $1,500,000. At 9.9%, the average over the same period of the S&P 500 — the index of the 500 largest U.S. companies — they become $2,700,000. The saving behavior in the three rows is identical: same $500, same forty years, $240,000 deposited in each case. The return alone separates the three endings by a factor of more than seven. This is why the return number — and whether it can be trusted — is the central object of this course.
 
 **Hold the rate fixed; change the years.** Return to the two savers. Both earned 7.7%; only the starting age differed. Ten fewer years turned $890,000 into $400,000. And the cost of delay is heaviest at the front: starting at 26 instead of 25 — one year of waiting, $3,600 not yet deposited — lowers the ending value at 65 by about $67,000. The first year's deposits are the most valuable dollars in the whole plan, because they compound the longest.
 
@@ -102,7 +102,7 @@ The rates in this unit are not invented, and they are not the whole menu. Here a
 | **The Diversifier** (2015–2026) | 14.1% | 5.1 years |
 | **The Growth Engine** (2015–2026) | 41.8% | 1.7 years |
 
-The first three of those names are the strategies this course follows from here to its final chapter; this table is your first, deliberately partial view of them — headline averages only, with their full stories to come. The span is the point: real, rules-based approaches have delivered anywhere from about 6% to about 40% a year over their measured windows. That is not a menu of interchangeable choices — the higher rows were measured over 2015–2026, an unusually strong period, and a strategy that compounds faster asks more of the investor who holds it. What exactly it asks, and how to judge whether a measured average deserves your trust, is precisely what the rest of this course teaches. For this unit, take the table as evidence of one fact: annual compounding rates well above the classic 7–8% exist and have been delivered by disciplined, published methods.
+Buy and hold is what it sounds like: the investor buys once and holds, trading nothing. The first three of those names are the strategies this course follows from here to its final chapter; this table is your first, deliberately partial view of them — headline averages only, with their full stories to come. The span is the point: real, rules-based approaches have delivered anywhere from about 6% to about 40% a year over their measured windows. That is not a menu of interchangeable choices — the higher rows were measured over 2015–2026, an unusually strong period, and a strategy that compounds faster asks more of the investor who holds it. What exactly it asks, and how to judge whether a measured average deserves your trust, is precisely what the rest of this course teaches. For this unit, take the table as evidence of one fact: annual compounding rates well above the classic 7–8% exist and have been delivered by disciplined, published methods.
 
 ## Trading rate for years
 
