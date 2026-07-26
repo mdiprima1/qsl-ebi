@@ -7,8 +7,8 @@
 | 01 | Opener — Compounding: the superpower many forget (dark) | title, four key points | What this unit is about |
 | 02 | Two savers, ten years apart | growth curves 25 vs 35 + committed question | Two savers |
 | 03 | The answer: less than half | tiles $890,000 / $400,000; 25% less in, 55% behind | Two savers |
-| 04 | Money earning money | rows: years 1/2/3/10/30, balance → earned | Money earning money |
-| 05 | After forty years | tiles: $1,950,000 · 19.4× | Money earning money |
+| 04 | Money earning money — the real path | rows: real 60/40 years 2015/2018/2019/2022/2024, balance → earned | Money earning money |
+| 05 | The full window, compounded | tiles: $270,424 actual · 2.70× (9.04%/yr measured) + labeled 40y projection | Money earning money |
 | 06 | Compound growth, defined | formula box FV = P × (1 + r)ⁿ | Definition |
 | 07 | What the formula's shape tells you | points: compound not add · no memory of effort · runs backward | Definition |
 | 08 | Lever 1 — the rate | 3 bars: $365k / $1.5M / $2.7M ($500/mo, 40y) | The rate and the years |

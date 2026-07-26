@@ -24,13 +24,15 @@ Hold on to the size of your miss, if you missed. Most of this unit is an explana
 
 ## Money earning money
 
-Start with what happens inside one account, with no deposits at all. Take $100,000 growing at 7.7% a year, and watch single years.
+Start with what happens inside one real account, with no deposits at all. On the first trading day of 2015, $100,000 goes into the 60/40 portfolio, and nothing is added or withdrawn again. What follows is the actual path, from the QSL backtest, year by year.
 
-Year one earns 7.7% of $100,000: $7,700. Year two starts from $107,700 — the original money plus year one's earnings. The same 7.7% now lands on a larger balance and earns $8,293. Year three starts from $115,993 and earns $8,931.
+The first year is nearly flat: 2015 earns $1,992. Then the balance builds — 2016 adds $8,337, 2017 adds $14,994 — and the market shows its other face: 2018 *loses* $4,218. The account enters 2019 with $121,105, and that year's +23.2% earns $28,130. The balance keeps climbing through 2020 and 2021, and then 2022 arrives — the year stocks and bonds fell together — and takes back $30,816 in one year, a fall of 15.6%.
 
-Nothing about the rate has changed. What changed is the balance the rate lands on, because last year's earnings stayed in the account and are now earning too. Run this forward and the effect stops being subtle. By year ten, the balance entering the year is $194,958, and the year earns $15,012 — nearly double what year one earned. By year thirty, the balance entering the year is $859,519, and that single year earns $66,183 — more than eight times year one. After forty years the account stands at about $1,950,000, nineteen times where it began, with nothing added along the way.
+Here is the part that carries this unit. The account enters 2024 with $195,537. That year returns +15.9% — a substantially *smaller percentage* than 2019's +23.2% — and yet it earns $31,025: **more dollars than 2019**. Nothing about the account's behavior improved. What changed is the balance the return lands on, because nine years of retained earnings — including the recoveries after the losses — were now earning too.
 
-This is the whole mechanism: growth applied to previous growth. Each year's earnings become next year's capital. The account does not grow by the same dollar amount each year; it grows by the same *proportion* of an ever-larger base. That distinction — same proportion, growing base — is what the rest of the unit unpacks.
+By June 2026 the account stands at $270,424: 2.70 times the start, a measured pace of 9.04% a year across eleven and a half real years that included two losing ones. This is the whole mechanism: growth applied to previous growth. The account does not grow by the same dollar amount each year — real years range from −$30,816 to +$31,025 — but the earnings stay invested, the base builds, and the same percentage produces ever more dollars. That distinction — lumpy percentages, growing base — is what the rest of the unit unpacks. And notice what you learned about markets on the way: real portfolios have flat years, losing years, and recovery years, and compounding works through all of them.
+
+Run the arithmetic forward as a projection — a projection, not a record — and the scale becomes visible: at 7.7% a year, the 60/40's measured average over 2005–2026, $100,000 projects to about $1,950,000 over forty years, nineteen times where it began.
 
 ## Compound growth, defined
 
@@ -40,7 +42,7 @@ The mechanism has a formal name, compound growth, and one line of arithmetic des
 
 Read it as a sentence: the ending value equals the starting amount, grown by the rate, once for every year. **P** is the starting amount. **r** is the annual return written as a decimal — 7.7% is 0.077. **n** is the number of years. **FV** is what the account is worth at the end.
 
-One step of the formula: $100,000 × 1.077 = $107,700. Two steps: $100,000 × 1.077 × 1.077 = $115,993. The exponent n counts how many times the multiplication happens. Forty steps at 7.7% multiply the starting amount by about 19.4 — which is where the $1,950,000 above comes from.
+One step of the formula: $100,000 × 1.077 = $107,700. The exponent n counts how many times the multiplication happens. Forty steps at 7.7% multiply the starting amount by about 19.4 — which is where the forty-year projection above comes from. On a real path the yearly factors differ — 0.844 in 2022, 1.232 in 2019 — but they multiply together the same way, and their combined effect over 2015–2026 was the 2.70× you just saw.
 
 Two things are worth noticing in the formula's shape. First, r and n do not add — they compound. Doubling the rate does far more than double the ending value once n is large, and doubling the years does far more than double it at any meaningful rate. Second, the formula has no memory of effort. It does not ask how hard the money was to save. It asks only three questions: how much, at what rate, for how long.
 
@@ -50,7 +52,7 @@ The same formula also runs backward. If you know the ending value you need and t
 
 The formula has two levers, and it pays to see each one isolated.
 
-**Hold the deposits fixed; change the rate.** Save $500 a month for forty years. At 2.0% — a savings account — the deposits become $365,000. At 7.7%, the 60/40 portfolio's average over 2005–2026, they become $1,500,000. At 9.9%, the average over the same period of the S&P 500 — the index of the 500 largest U.S. companies — they become $2,700,000. The saving behavior in the three rows is identical: same $500, same forty years, $240,000 deposited in each case. The return alone separates the three endings by a factor of more than seven. This is why the return number — and whether it can be trusted — is the central object of this course.
+**Hold the deposits fixed; change the rate.** Save $500 a month for forty years. At 0.38% — the FDIC national-average savings rate as of July 2026 — the deposits become about $260,000, barely above the $240,000 put in. At 7.7%, the 60/40 portfolio's average over 2005–2026, they become $1,500,000. At 9.9%, the average over the same period of the S&P 500 — the index of the 500 largest U.S. companies — they become $2,700,000. The saving behavior in the three rows is identical: same $500, same forty years, $240,000 deposited in each case. The return alone separates the three endings by a factor of more than seven. This is why the return number — and whether it can be trusted — is the central object of this course.
 
 **Hold the rate fixed; change the years.** Return to the two savers. Both earned 7.7%; only the starting age differed. Ten fewer years turned $890,000 into $400,000. And the cost of delay is heaviest at the front: starting at 26 instead of 25 — one year of waiting, $3,600 not yet deposited — lowers the ending value at 65 by about $67,000. The first year's deposits are the most valuable dollars in the whole plan, because they compound the longest.
 
@@ -62,11 +64,11 @@ But money is not the only lever. The formula has two, and what the second lever 
 
 The two-savers example is deliberately narrow. Here is the same arithmetic across three realistic situations, at the same three rates. In each case we compute two numbers: the account value when payouts begin, and the level amount the account can then pay out each month to age 95 while keeping a fifth of the pot in reserve.
 
-**Maya is 22 and starts from zero,** investing $300 a month until 65. At 2.0% she reaches $245,000, which pays about $800 a month. At 7.7% she reaches $1,150,000 — about $7,650 a month. At 9.9% she reaches $2,150,000 — about $18,000 a month. The saving is identical in the three rows; the retirement it buys is not.
+**Maya is 22 and starts from zero,** investing $300 a month until 65. At 0.38% — today's average savings account — she reaches $170,000, which pays about $400 a month. At 7.7% she reaches $1,150,000 — about $7,650 a month. At 9.9% she reaches $2,150,000 — about $18,000 a month. The saving is identical in the three rows; the retirement it buys is not.
 
-**Daniel is 40, has $50,000 saved, and can invest $1,000 a month.** He wants to stop working at 60, twenty years away. At 2.0% he reaches $370,000, paying about $1,100 a month. At 7.7%: $770,000 and $5,100 a month. At 9.9%: $1,050,000 and $8,450 a month. Twenty years is enough for the rate to matter enormously. Whether Daniel can retire at 60 is as much a return question as a savings question.
+**Daniel is 40, has $50,000 saved, and can invest $1,000 a month.** He wants to stop working at 60, twenty years away. At 0.38% he reaches $305,000, paying about $650 a month. At 7.7%: $770,000 and $5,100 a month. At 9.9%: $1,050,000 and $8,450 a month. Twenty years is enough for the rate to matter enormously. Whether Daniel can retire at 60 is as much a return question as a savings question.
 
-**Rosa is 65 and retiring now with $1,000,000 saved.** Her question runs the formula in the other direction: what can the million pay her each month to 95? At 2.0%, about $3,400. At 7.7%, about $7,400. At 9.9%, about $9,150. The saving is finished; the return is not. During thirty years of payouts, the money still in the account keeps compounding, and the rate decides how fast the pot refills as it drains. The same million produces three very different retirements.
+**Rosa is 65 and retiring now with $1,000,000 saved.** Her question runs the formula in the other direction: what can the million pay her each month to 95? At 0.38%, about $2,500. At 7.7%, about $7,400. At 9.9%, about $9,150. The saving is finished; the return is not. During thirty years of payouts, the money still in the account keeps compounding, and the rate decides how fast the pot refills as it drains. The same million produces three very different retirements.
 
 Notice what the three cases share. Nobody's outcome was decided by willpower alone. In every row, the deposits were held fixed and the return moved the result by multiples. That is not an argument against saving — without Maya's $300 a month there is nothing to compound. It is an argument that the return you accept is a decision with consequences as large as the saving itself, and it deserves the same seriousness.
 
@@ -127,7 +129,7 @@ One sentence of honesty belongs next to that, and it is a hint rather than a les
 
 One mental tool makes compound thinking usable in conversation, without a calculator: the rule of 72. Divide 72 by the annual return in percent, and you get, close enough, the years it takes money to double.
 
-At 7.7%, the rule says 72 ÷ 7.7 ≈ 9.4 years; the exact answer is 9.3. At 9.9%: rule 7.3, exact 7.3. At 2.0%: rule 36, exact 35. The approximation is good across the range of returns this course deals in.
+At 7.7%, the rule says 72 ÷ 7.7 ≈ 9.4 years; the exact answer is 9.3. At 9.9%: rule 7.3, exact 7.3. At 0.38% — a savings account — the rule says about 190 years and the exact answer is 183; the rule stretches at very low rates, and either number makes the point. The approximation is good across the range of returns this course deals in.
 
 The rule earns its place because doubling counts are how compounding becomes intuitive. Forty years at 7.7% is about four doublings: 1 → 2 → 4 → 8 → 16 — nineteen times your money, as computed earlier, because the doublings land on each other. When someone quotes you a return, the fastest honest reaction is to convert it into a doubling time and count doublings across your horizon. It is also the fastest way to feel the difference between 6% and 8%: twelve-year doublings against nine-year doublings, compounded across a working life.
 
@@ -139,6 +141,6 @@ Then answer the unit's questions, which check the abilities this unit set out to
 
 ## What to keep from this unit
 
-Money that stays invested earns on its own earnings; the account grows by a fixed proportion of a growing base, and FV = P × (1 + r)ⁿ computes the result exactly. The formula has two levers, and both are stronger than intuition expects: the years, because the earliest money compounds longest, and the rate, because identical deposits ended at $365,000, $1,500,000, or $2,700,000 on the rate alone. Intuition underestimates all of this in a documented, directional way, so calculate rather than guess. The mechanism is symmetric — a 1% annual fee consumed 31% of a forty-year outcome — and every rate in this unit is an average over a stated window, not a promise.
+Money that stays invested earns on its own earnings; the account grows by a fixed proportion of a growing base, and FV = P × (1 + r)ⁿ computes the result exactly. The formula has two levers, and both are stronger than intuition expects: the years, because the earliest money compounds longest, and the rate, because identical deposits ended at $260,000, $1,500,000, or $2,700,000 on the rate alone. Intuition underestimates all of this in a documented, directional way, so calculate rather than guess. The mechanism is symmetric — a 1% annual fee consumed 31% of a forty-year outcome — and every rate in this unit is an average over a stated window, not a promise.
 
 The two levers are the practical result. If you are early in your investing life, time is on your side and the conservative end of the menu — the 6% to 8% that broad portfolios have delivered over decades — is enough to build a serious outcome. If you are starting later, the same arithmetic that priced your delay also prices your path: a higher compounding rate closes the gap, and the menu shows that such rates have been delivered by real, disciplined methods. Reaching for a higher rate is a decision that has to be made well — the strategies that compound faster ask more of the investor holding them, and the units ahead teach exactly what they ask and how to choose among them. That is the work this course does with you. Whether your lever is time or rate, the next twenty-six units are about pulling it honestly.

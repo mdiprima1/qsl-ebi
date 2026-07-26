@@ -9,16 +9,17 @@ Outputs:
   data_unit1_compounding.csv   every figure used on the slides
   chart_points.txt             SVG polyline coordinates for the slide-1 chart
 
-Rates (inputs, carried from the old deck, provenance as recorded there):
-  2.0%  savings account
+Rates (inputs, every one real and sourced per rule card numbers-real-market):
+  0.38% savings account — FDIC national average savings rate, July 2026
+        (fdic.gov national rates; replaced the old stylized 2.0%)
   7.7%  60/40 portfolio average annual return, 2005-2026 (QSL backtest)
   9.9%  S&P 500 average annual return, 2005-2026 (QSL backtest)
 """
-import csv
+import csv, datetime, json
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-R2, R64, RSP = 0.02, 0.077, 0.099
+R2, R64, RSP = 0.0038, 0.077, 0.099  # R2 = FDIC national average savings, Jul 2026
 RESERVE = 0.2  # fifth of the pot still remaining at the end of payouts
 
 
@@ -82,11 +83,34 @@ for label, yr in (("y1", 1), ("y2", 2), ("y3", 3), ("y10", 10), ("y30", 30)):
     rec(f"grow_{label}_earned", earned, f"${earned:,.0f}", f"earned during year {yr} at 7.7%")
 
 # --- Slide 5: rate x years — $500/month, 40 years, three rates (old deck slide 3) ---
-for r, label, note in ((R2, "rate2", "2.0% savings account"),
+for r, label, note in ((R2, "rate2", "0.38% savings account (FDIC national average, Jul 2026)"),
                        (R64, "rate77", "7.7% 60/40 portfolio 2005-2026"),
                        (RSP, "rate99", "9.9% S&P 500 2005-2026")):
     pot = pot_and_safe(0, 500, 25, 65, r)[0]
     rec(f"t500_{label}", pot, f"${rk(pot):,.0f}", f"$500/mo, 40y at {note}")
+
+# --- The real path: $100,000 in the 60/40, Jan 2015 - Jun 2026 -------------
+# Source: data_6040_2015_2026_qc.json (QC-native backtest, copied from
+# qsl-research/demo-strategies/BENCHMARKS/results). Real year-by-year path
+# per rule card numbers-real-market (Marco, 2026-07-26).
+qc = json.loads((HERE / "data_6040_2015_2026_qc.json").read_text())
+def _qdate(o):
+    return datetime.date(1970, 1, 1) + datetime.timedelta(days=o)
+_by_year = {}
+for _o, _v in qc["equity_daily"]:
+    _by_year[_qdate(_o).year] = _v          # last point in each year wins
+_prev = 100_000.0
+for _y in sorted(_by_year):
+    _v = _by_year[_y]
+    rec(f"real6040_{_y}_start", _prev, f"${_prev:,.0f}", f"60/40: balance entering {_y}")
+    rec(f"real6040_{_y}_pnl", _v - _prev, f"${_v - _prev:+,.0f}", f"60/40: dollars earned in {_y}")
+    rec(f"real6040_{_y}_pct", (_v / _prev - 1) * 100, f"{(_v / _prev - 1) * 100:+.1f}%", f"60/40: return in {_y}")
+    _prev = _v
+_end = qc["equity_daily"][-1][1]
+rec("real6040_end", _end, f"${_end:,.0f}", "60/40 end value Jun 2026 ($100,000 invested Jan 2015)")
+rec("real6040_multiple", _end / 100_000, f"{_end / 100_000:.2f}x", "full-window multiple, Jan 2015 - Jun 2026")
+rec("real6040_rate", 9.04, "9.04%", "measured compound annual return (backtest statistics)")
+rec("real6040_worst_dip", -21.4, "-21.4%", "deepest fall below an earlier peak along the way (backtest statistics)")
 
 # --- Manuscript figures (workflow step 3) ---
 import math

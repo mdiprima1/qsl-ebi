@@ -9,23 +9,23 @@
 - Two-savers case: $300/month at 7.7%, start 25 vs 35 → $890,000 vs $400,000 at 65; deposits $144,000 vs $108,000. The late saver deposits 25% less and ends 55% behind (2.23×). (CSV: `saver_*`, `end_gap_ratio`.)
 - Cost of one year of delay: start at 26 instead of 25 → $67,000 less at 65, against $3,600 not deposited that year. (CSV: `delay_1y_cost`.)
 - Catch-up cost: matching the 25-starter from 35 requires $670/month vs $300 — more than double, for thirty years. (CSV: `catchup_monthly_from_35`.)
-- Rate × years: $500/month, 40 years → $365,000 at 2.0% · $1,500,000 at 7.7% · $2,700,000 at 9.9%. (CSV: `t500_*`.)
+- Rate × years: $500/month, 40 years → $260,000 at 0.38% (FDIC national average savings rate, Jul 2026) · $1,500,000 at 7.7% · $2,700,000 at 9.9%. (CSV: `t500_*`.)
 
 ## 2. The three life scenarios (old deck, recomputed)
 
 Same calculator both directions: accumulation to a pot, then the level monthly payout to age 95 leaving a fifth of the pot (RESERVE 0.2). All in CSV (`maya_*`, `daniel_*`, `rosa_*`):
 
-| | 2.0% | 7.7% | 9.9% |
+| | 0.38% (FDIC nat. avg, Jul 2026) | 7.7% | 9.9% |
 |---|---|---|---|
-| Maya, 22, $0 + $300/mo, payouts 65 | $245,000 → $800/mo | $1,150,000 → $7,650/mo | $2,150,000 → $18,000/mo |
-| Daniel, 40, $50k + $1,000/mo, payouts 60 | $370,000 → $1,100/mo | $770,000 → $5,100/mo | $1,050,000 → $8,450/mo |
-| Rosa, 65, $1,000,000, payouts now | → $3,400/mo | → $7,400/mo | → $9,150/mo |
+| Maya, 22, $0 + $300/mo, payouts 65 | $170,000 → $400/mo | $1,150,000 → $7,650/mo | $2,150,000 → $18,000/mo |
+| Daniel, 40, $50k + $1,000/mo, payouts 60 | $305,000 → $650/mo | $770,000 → $5,100/mo | $1,050,000 → $8,450/mo |
+| Rosa, 65, $1,000,000, payouts now | → $2,500/mo | → $7,400/mo | → $9,150/mo |
 
 Teaching value: three life stages, one formula; Rosa shows the return keeps deciding the outcome after saving ends.
 
 ## 3. Rates and their provenance
 
-- 2.0% savings account (stylized) · 7.7% = 60/40 portfolio average annual return, 2005–2026 · 9.9% = S&P 500, 2005–2026. Carried from the old free-course Unit 1 deck (`qsl-hq/blueprint/COURSE-FREE/unit-1/build_unit1.py`), which computed them from QSL backtests. Unit 3 teaches how such numbers are measured.
+- 0.38% savings account — FDIC national average savings rate, July 2026 (fdic.gov national rates; replaced the earlier stylized 2.0% per rule card numbers-real-market) · 7.7% = 60/40 portfolio average annual return, 2005–2026 · 9.9% = S&P 500, 2005–2026. Carried from the old free-course Unit 1 deck (`qsl-hq/blueprint/COURSE-FREE/unit-1/build_unit1.py`), which computed them from QSL backtests. Unit 3 teaches how such numbers are measured.
 - **The menu of five real rates (Marco directive 2026-07-26 — the unit's demonstration set):** The Defender 6.2%/yr (2015–2026) · 60/40 portfolio 7.7%/yr (2005–2026) · SPY buy-and-hold 7.9%/yr full history (1998–2026) · The Diversifier 14.1%/yr (2015–2026) · The Growth Engine 41.8%/yr (2015–2026). Strategy numbers from `qsl-research/demo-strategies/overview-table.md` (QC-native); 60/40 from the old-deck backtest. Doubling times (rule of 72): 11.6y · 9.4y · 9.1y · 5.1y · 1.7y. (CSV: `menu_*`, `double_*`.)
 - Window honesty per `CHAPTER-1-REFERENCE.md`: 2015–2026 is a strong bull that flatters the Growth Engine and understates the Defender; SPY full-history carries the true −49% drawdown era. In this unit the caveat is a hint, not a lesson (risk arrives in later units).
 - Open item: Marco asked for the **long-term** 60/40 number; the recorded QSL figure is 7.7% over 2005–2026. A full-history 60/40 backtest (e.g. 1998–2026 to match SPY) does not exist in the vault yet — a QRES ticket if wanted.
@@ -57,7 +57,7 @@ Teaching value: every required rate sits inside the span real strategies deliver
 
 ## 6. The rule of 72 (computed)
 
-Doubling time ≈ 72 / rate-in-percent. Accuracy at our three rates: 2.0% → rule 36.0y vs exact 35.0y · 7.7% → 9.4y vs 9.3y · 9.9% → 7.3y vs 7.3y. Good enough for mental checks across the course. (CSV: `double_exact_*`, `double_rule72_*`.)
+Doubling time ≈ 72 / rate-in-percent. Accuracy at our three rates: 0.38% → rule 189.5y vs exact 182.8y (the rule stretches at very low rates) · 7.7% → 9.4y vs 9.3y · 9.9% → 7.3y vs 7.3y. Good enough for mental checks across the course. (CSV: `double_exact_*`, `double_rule72_*`.)
 
 ## 7. Collected but NOT used (and why)
 

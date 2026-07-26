@@ -23,7 +23,7 @@ Time and rate are interchangeable levers. Started early, conservative compoundin
 2. A fund charges a 1% annual fee. Over 40 years at 7.7%, roughly what share of the no-fee ending value does the fee consume? (a) 1% · (b) 4% · (c) 10% · **(d) about 30%**.
 3. At 9.9% a year, money doubles in about: (a) 10 years · **(b) 7 years** · (c) 14 years · (d) 4 years. (Rule of 72.)
 4. To finish at 65 with what a $300-a-month saver starting at 25 reaches, someone starting at 35 must save about: (a) $370 · (b) $450 · **(c) $670** · (d) $900 a month.
-5. Rosa retires at 65 with $1,000,000. Why does the same million pay $3,400 a month in one case and $7,400 in another? **The return keeps working during the payout years; the rate decides how fast the pot refills as it drains.**
+5. Rosa retires at 65 with $1,000,000. Why does the same million pay $2,500 a month in one case and $7,400 in another? **The return keeps working during the payout years; the rate decides how fast the pot refills as it drains.**
 6. Saving $300 a month from age 35, roughly what annual return matches a 25-starter earning 7.7% by age 65? (a) 8.5% · **(b) about 12%** · (c) about 25% · (d) no rate can close the gap.
 
 ## The misconceptions this unit must break

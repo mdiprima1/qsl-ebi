@@ -58,3 +58,10 @@ on this unit — `brief.md` (step 1), `research.md` (step 2), `manuscript.md`
 (step 3, ~2,800 words, awaiting Marco's review) now sit beside the earlier
 five-slide draft, which becomes the concept-introduction primitive inside
 the storyboard (step 4) once the manuscript is approved.
+
+**2026-07-26, later:** rule card `numbers-real-market` (Marco) applied through
+the Florida gate: slide 04/05 now walk the REAL 60/40 path Jan 2015–Jun 2026
+(QC backtest, `data_6040_2015_2026_qc.json`; 2018 and 2022 losses included;
+2019-vs-2024 dollars lesson), the 40-year figure is explicitly a projection,
+and the savings rate is the real FDIC national average (0.38%, Jul 2026),
+replacing the stylized 2.0% everywhere. Gate: full PASS incl. LLM reviewer.
