@@ -1,4 +1,8 @@
-# Changelog — QS Lab EBIFE Research Package
+# Changelog — QS Lab EBI Research Package
+
+## 1.5.1 — 2026-07-26
+
+Repository renamed **qsl-ebife -> qsl-ebi** (Marco). GitHub redirects old URLs including raw; current delivery base is `https://raw.githubusercontent.com/mdiprima1/qsl-ebi/main/...`. README gained a **Canonical sources** section pointing to the qsl-hq syllabus of record and the QSL Strategy Validation Process (referenced, never copied). Brand headers and PACKAGE-SPEC delivery URL updated. No strategy bytes changed.
 
 All notable changes to this package. The version in `VERSION` is the package version installed by the install prompt.
 

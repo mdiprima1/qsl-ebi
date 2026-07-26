@@ -1,6 +1,6 @@
 # Instructions for AI agents working in this repository
 
-You are in the **QS Lab EBIFE Research Package** — the public study pack of the QSL course "Evidence-Based Investing for Everyone." Read `README.md` for the architecture before changing anything.
+You are in the **QS Lab EBI Research Package** — the public study pack of the QSL course "Evidence-Based Investing for Everyone." Read `README.md` for the architecture before changing anything.
 
 The repository has three zones with different rules. **Know which zone you are in:**
 
