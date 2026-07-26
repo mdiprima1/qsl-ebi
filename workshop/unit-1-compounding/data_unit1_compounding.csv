@@ -20,3 +20,35 @@ grow_y30_earned,66182.95,"$66,183",earned during year 30 at 7.7%
 t500_rate2,365722.13,"$365,000","$500/mo, 40y at 2.0% savings account"
 t500_rate77,1486668.11,"$1,500,000","$500/mo, 40y at 7.7% 60/40 portfolio 2005-2026"
 t500_rate99,2699650.11,"$2,700,000","$500/mo, 40y at 9.9% S&P 500 2005-2026"
+lump100k_40y_77,1943695.06,"$1,950,000","$100,000, 40y at 7.7%, no fee"
+lump100k_40y_67net,1338371.8,"$1,350,000","$100,000, 40y at 6.7% (7.7% less a 1% annual fee)"
+fee1pct_40y_lost,31.14,31%,share of the no-fee ending consumed by a 1% annual fee over 40y
+double_exact_2,35.0,35.0y,exact doubling time at 2.0%
+double_rule72_2,36.0,36.0y,rule of 72 at 2.0%
+double_exact_77,9.34,9.3y,exact doubling time at 7.7%
+double_rule72_77,9.35,9.4y,rule of 72 at 7.7%
+double_exact_99,7.34,7.3y,exact doubling time at 9.9%
+double_rule72_99,7.27,7.3y,rule of 72 at 9.9%
+delay_1y_cost,67232.51,"$67,000","ending gap at 65: start at 25 vs start at 26 ($3,600 deposited that year)"
+catchup_monthly_from_35,669.86,$670/mo,"monthly saving from 35 that matches $300/mo from 25, at 65"
+maya_pot_2,243982.42,"$245,000",maya: end value at 2.0%
+maya_safe_2,800.27,$800/mo,maya: monthly payout to 95 at 2.0%
+maya_pot_77,1126385.0,"$1,150,000",maya: end value at 7.7%
+maya_safe_77,7661.15,"$7,650/mo",maya: monthly payout to 95 at 7.7%
+maya_pot_99,2162501.53,"$2,150,000",maya: end value at 9.9%
+maya_safe_99,17933.92,"$18,000/mo",maya: monthly payout to 95 at 9.9%
+daniel_pot_2,368528.96,"$370,000",daniel: end value at 2.0%
+daniel_safe_2,1095.63,"$1,100/mo",daniel: monthly payout to 95 at 2.0%
+daniel_pot_77,770165.29,"$770,000",daniel: end value at 7.7%
+daniel_safe_77,5083.37,"$5,100/mo",daniel: monthly payout to 95 at 7.7%
+daniel_pot_99,1040163.74,"$1,050,000",daniel: end value at 9.9%
+daniel_safe_99,8465.58,"$8,450/mo",daniel: monthly payout to 95 at 9.9%
+rosa_pot_2,1020000.0,"$1,000,000",rosa: end value at 2.0%
+rosa_safe_2,3421.67,"$3,400/mo",rosa: monthly payout to 95 at 2.0%
+rosa_pot_77,1077000.0,"$1,100,000",rosa: end value at 7.7%
+rosa_safe_77,7381.64,"$7,400/mo",rosa: monthly payout to 95 at 7.7%
+rosa_pot_99,1099000.0,"$1,100,000",rosa: end value at 9.9%
+rosa_safe_99,9160.15,"$9,150/mo",rosa: monthly payout to 95 at 9.9%
+double_growth_engine,1.72,1.7y,"rule-of-72 doubling time: The Growth Engine, 2015-2026 window"
+double_diversifier,5.11,5.1y,"rule-of-72 doubling time: The Diversifier, 2015-2026 window"
+double_spy_full,9.11,9.1y,"rule-of-72 doubling time: SPY buy-and-hold, full history 1998-2026"

@@ -88,6 +88,54 @@ for r, label, note in ((R2, "rate2", "2.0% savings account"),
     pot = pot_and_safe(0, 500, 25, 65, r)[0]
     rec(f"t500_{label}", pot, f"${rk(pot):,.0f}", f"$500/mo, 40y at {note}")
 
+# --- Manuscript figures (workflow step 3) ---
+import math
+
+# Lump sums, 40 years
+rec("lump100k_40y_77", 100_000 * (1 + R64) ** 40, f"${rk(100_000 * (1 + R64) ** 40):,.0f}",
+    "$100,000, 40y at 7.7%, no fee")
+net = R64 - 0.01
+rec("lump100k_40y_67net", 100_000 * (1 + net) ** 40, f"${rk(100_000 * (1 + net) ** 40):,.0f}",
+    "$100,000, 40y at 6.7% (7.7% less a 1% annual fee)")
+fee_lost = 1 - (1 + net) ** 40 / (1 + R64) ** 40
+rec("fee1pct_40y_lost", fee_lost * 100, f"{fee_lost * 100:.0f}%",
+    "share of the no-fee ending consumed by a 1% annual fee over 40y")
+
+# Rule of 72 vs exact doubling time
+for r, label in ((R2, "2"), (R64, "77"), (RSP, "99")):
+    exact = math.log(2) / math.log(1 + r)
+    rec(f"double_exact_{label}", exact, f"{exact:.1f}y", f"exact doubling time at {r*100:.1f}%")
+    rec(f"double_rule72_{label}", 72 / (r * 100), f"{72 / (r * 100):.1f}y", f"rule of 72 at {r*100:.1f}%")
+
+# Cost of one year of delay ($300/mo saver, read at 65)
+pot26, _ = pot_and_safe(0, 300, 26, 65, R64)
+rec("delay_1y_cost", potA - pot26, f"${rk(potA - pot26):,.0f}",
+    "ending gap at 65: start at 25 vs start at 26 ($3,600 deposited that year)")
+
+# Catch-up: monthly amount from 35 that matches the 25-starter at 65
+annuity30 = potB / 300  # ending dollars per monthly dollar over 30y
+catchup = potA / annuity30
+rec("catchup_monthly_from_35", catchup, f"${catchup:,.0f}/mo",
+    "monthly saving from 35 that matches $300/mo from 25, at 65")
+
+# Three application scenarios (old deck slides 4-6): end value and the level
+# monthly payout to 95 leaving a fifth of the pot (RESERVE 0.2)
+for who, args in (("maya", (0, 300, 22, 65)),        # 22, $0, $300/mo, payouts 65
+                  ("daniel", (50_000, 1_000, 40, 60)),  # 40, $50k, $1,000/mo, payouts 60
+                  ("rosa", (1_000_000, 0, 65, 66))):    # 65, $1M, payouts now
+    for r, rl in ((R2, "2"), (R64, "77"), (RSP, "99")):
+        pot, safe = pot_and_safe(*args, r)
+        rec(f"{who}_pot_{rl}", pot, f"${rk(pot):,.0f}", f"{who}: end value at {r*100:.1f}%")
+        rec(f"{who}_safe_{rl}", safe, f"${rk(safe):,.0f}/mo", f"{who}: monthly payout to 95 at {r*100:.1f}%")
+
+# Doubling times of the course strategies (rates from
+# qsl-research/demo-strategies/overview-table.md; windows as recorded there)
+for rate_pct, label, note in ((41.8, "growth_engine", "The Growth Engine, 2015-2026 window"),
+                              (14.1, "diversifier", "The Diversifier, 2015-2026 window"),
+                              (7.9, "spy_full", "SPY buy-and-hold, full history 1998-2026")):
+    rec(f"double_{label}", 72 / rate_pct, f"{72 / rate_pct:.1f}y",
+        f"rule-of-72 doubling time: {note}")
+
 with (HERE / "data_unit1_compounding.csv").open("w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=["name", "value", "display", "note"])
     w.writeheader()

@@ -37,4 +37,10 @@ the quiz · the go-deeper close.
 approval; unit assembly references the module.
 
 **History:** 2026-07-26 first draft (five-slide template; content from the
-old free-course deck per Marco's "use as base" direction).
+old free-course deck per Marco's "use as base" direction). Same day: Marco
+ruled five slides too thin for a unit; the authoring workflow
+(`qsl-product/EBI Production/course-authoring-workflow.md`) is being tested
+on this unit — `brief.md` (step 1), `research.md` (step 2), `manuscript.md`
+(step 3, ~2,800 words, awaiting Marco's review) now sit beside the earlier
+five-slide draft, which becomes the concept-introduction primitive inside
+the storyboard (step 4) once the manuscript is approved.
