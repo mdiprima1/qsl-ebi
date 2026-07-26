@@ -22,3 +22,12 @@ pattern / eval case. Promotion target open (qsl-ebi tools vs qsl-product vs
 qsl-infra — Marco's call).
 
 **Run:** `python3 check_concepts.py --unit 1 <files in student-facing order>`
+
+**Extended 2026-07-26 (same day):** the generic layer answering Marco's
+"50–60 little teaching moments" question — `rule_cards.json` (one store,
+every correction one card with a scope) + `check_rules.py` (generic runner:
+three assertion types execute all lint cards; reviewer cards are retrieved
+by scope in the model pass; template cards are enforced by the scaffold
+itself). Routing priority: template > lint > reviewer. First run: Unit 1
+deck passes the 4 seeded presentation cards. The concept registry is a
+special case of this store with a dedicated checker.

@@ -1,0 +1,63 @@
+{
+  "comment": "Generic rule store (proof of concept). Every Marco correction becomes ONE card here, routed by 'enforce' to one of three generic paths: template (baked into the scaffold/generator - listed for the record, nothing to run), lint (deterministic assertion, executed by check_rules.py), reviewer (judgment rule + examples, retrieved by scope during the model review pass - never loaded in bulk). New scopes cost nothing; new machinery is never needed.",
+  "cards": [
+    {
+      "id": "chart-source-line",
+      "scope": "chart",
+      "rule": "Every slide that shows a chart carries its source line (data origin, period, generator).",
+      "enforce": "lint",
+      "check": {"type": "slide_if_then", "if": "<svg", "then": "chrome-l"},
+      "source": "presentation convention, seeded 2026-07-26"
+    },
+    {
+      "id": "chart-legend",
+      "scope": "chart",
+      "rule": "Every multi-series chart carries a legend naming each series.",
+      "enforce": "lint",
+      "check": {"type": "slide_if_then", "if": "polyline", "then": "class=\"legend\""},
+      "source": "presentation convention, seeded 2026-07-26"
+    },
+    {
+      "id": "slide-page-number",
+      "scope": "slide",
+      "rule": "Every slide carries its page number (NN / total).",
+      "enforce": "lint",
+      "check": {"type": "per_slide_required", "pattern": "chrome-r"},
+      "source": "presentation convention, seeded 2026-07-26"
+    },
+    {
+      "id": "bars-captioned",
+      "scope": "chart",
+      "rule": "Every bar in a bar chart carries a caption naming its case (rate, window).",
+      "enforce": "lint",
+      "check": {"type": "slide_if_then", "if": "class=\"bars\"", "then": "class=\"cap\""},
+      "source": "presentation convention, seeded 2026-07-26"
+    },
+    {
+      "id": "chart-geometry-computed",
+      "scope": "chart",
+      "rule": "Chart geometry (curve points, bar heights) comes from the unit's compute script, never drawn by hand.",
+      "enforce": "template",
+      "template_home": "workflow step 5 production note + compute script pattern (chart_points.txt)",
+      "source": "workshop rule 3, formalized 2026-07-26"
+    },
+    {
+      "id": "table-windows-stated",
+      "scope": "table",
+      "rule": "Any table showing returns states each row's measurement window in the row itself, not only in a footnote.",
+      "enforce": "reviewer",
+      "good_example": "The Defender (2015-2026) | 6.2%",
+      "bad_example": "The Defender | 6.2% (windows in small print below)",
+      "source": "QSL window-honesty standard, seeded 2026-07-26"
+    },
+    {
+      "id": "slide-one-idea",
+      "scope": "slide",
+      "rule": "One idea per slide; if a slide needs two 'and's in its title, it is two slides.",
+      "enforce": "reviewer",
+      "good_example": "Lever one: the rate",
+      "bad_example": "The rate and the years and what they mean for you",
+      "source": "storyboard convention, seeded 2026-07-26"
+    }
+  ]
+}
