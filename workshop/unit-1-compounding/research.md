@@ -26,8 +26,22 @@ Teaching value: three life stages, one formula; Rosa shows the return keeps deci
 ## 3. Rates and their provenance
 
 - 2.0% savings account (stylized) · 7.7% = 60/40 portfolio average annual return, 2005–2026 · 9.9% = S&P 500, 2005–2026. Carried from the old free-course Unit 1 deck (`qsl-hq/blueprint/COURSE-FREE/unit-1/build_unit1.py`), which computed them from QSL backtests. Unit 3 teaches how such numbers are measured.
-- The course strategies, first partial view (`qsl-research/demo-strategies/overview-table.md`, QC-native): The Growth Engine 41.8%/yr (2015–2026) · The Diversifier 14.1%/yr (2015–2026) · The Defender 6.2%/yr (2015–2026) · SPY buy-and-hold 7.9%/yr over its full 1998–2026 history (12.7%/yr on 2015–2026). Window honesty per `CHAPTER-1-REFERENCE.md`: 2015–2026 is a strong bull that flatters the Growth Engine and understates the Defender; SPY full-history carries the true −49% drawdown era.
-- Doubling times via rule of 72: Growth Engine ≈ 1.7y · Diversifier ≈ 5.1y · SPY ≈ 9.1y. (CSV: `double_*`.)
+- **The menu of five real rates (Marco directive 2026-07-26 — the unit's demonstration set):** The Defender 6.2%/yr (2015–2026) · 60/40 portfolio 7.7%/yr (2005–2026) · SPY buy-and-hold 7.9%/yr full history (1998–2026) · The Diversifier 14.1%/yr (2015–2026) · The Growth Engine 41.8%/yr (2015–2026). Strategy numbers from `qsl-research/demo-strategies/overview-table.md` (QC-native); 60/40 from the old-deck backtest. Doubling times (rule of 72): 11.6y · 9.4y · 9.1y · 5.1y · 1.7y. (CSV: `menu_*`, `double_*`.)
+- Window honesty per `CHAPTER-1-REFERENCE.md`: 2015–2026 is a strong bull that flatters the Growth Engine and understates the Defender; SPY full-history carries the true −49% drawdown era. In this unit the caveat is a hint, not a lesson (risk arrives in later units).
+- Open item: Marco asked for the **long-term** 60/40 number; the recorded QSL figure is 7.7% over 2005–2026. A full-history 60/40 backtest (e.g. 1998–2026 to match SPY) does not exist in the vault yet — a QRES ticket if wanted.
+
+## 3a. Catching up by rate (computed — the unit's second key table)
+
+The annual return that makes $300/month from a later start match the 25-starter's $890,000 at 65 (CSV: `catchup_rate_from_*`):
+
+| Start | Years | Required return | Where it sits on the menu |
+|---|---|---|---|
+| 25 | 40 | 7.7% | the conservative rows |
+| 35 | 30 | 11.9% | below The Diversifier's 14.1% |
+| 40 | 25 | 15.5% | just above The Diversifier |
+| 45 | 20 | 21.6% | between Diversifier and Growth Engine |
+
+Teaching value: every required rate sits inside the span real strategies delivered. Late starts are recoverable via the rate lever; the cost of the higher rate is hinted, taught later.
 
 ## 4. Why intuition fails (external, cited)
 

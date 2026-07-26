@@ -128,13 +128,39 @@ for who, args in (("maya", (0, 300, 22, 65)),        # 22, $0, $300/mo, payouts 
         rec(f"{who}_pot_{rl}", pot, f"${rk(pot):,.0f}", f"{who}: end value at {r*100:.1f}%")
         rec(f"{who}_safe_{rl}", safe, f"${rk(safe):,.0f}/mo", f"{who}: monthly payout to 95 at {r*100:.1f}%")
 
-# Doubling times of the course strategies (rates from
-# qsl-research/demo-strategies/overview-table.md; windows as recorded there)
-for rate_pct, label, note in ((41.8, "growth_engine", "The Growth Engine, 2015-2026 window"),
-                              (14.1, "diversifier", "The Diversifier, 2015-2026 window"),
-                              (7.9, "spy_full", "SPY buy-and-hold, full history 1998-2026")):
+# The menu of real rates (qsl-research/demo-strategies/overview-table.md for
+# the three strategies + SPY; 60/40 = the old-deck backtest average).
+# Doubling times by rule of 72.
+MENU = ((6.2, "defender", "The Defender, 2015-2026 window"),
+        (7.7, "6040", "60/40 portfolio, 2005-2026"),
+        (7.9, "spy_full", "SPY buy-and-hold, full history 1998-2026"),
+        (14.1, "diversifier", "The Diversifier, 2015-2026 window"),
+        (41.8, "growth_engine", "The Growth Engine, 2015-2026 window"))
+for rate_pct, label, note in MENU:
+    rec(f"menu_{label}", rate_pct, f"{rate_pct:.1f}%", f"average annual return: {note}")
     rec(f"double_{label}", 72 / rate_pct, f"{72 / rate_pct:.1f}y",
         f"rule-of-72 doubling time: {note}")
+
+# Catch-up rates: the annual return that makes $300/mo from a later start
+# reach the 25-starter's raw ending (potA) at 65. Bisection on the rate.
+def fv_monthly(monthly, years, rate):
+    rm = (1 + rate) ** (1 / 12) - 1
+    g = (1 + rm) ** (years * 12)
+    return monthly * ((g - 1) / rm)
+
+def required_rate(target, monthly, years):
+    lo, hi = 0.001, 1.0
+    for _ in range(200):
+        mid = (lo + hi) / 2
+        if fv_monthly(monthly, years, mid) < target: lo = mid
+        else: hi = mid
+    return (lo + hi) / 2
+
+for start_age in (35, 40, 45):
+    yrs = 65 - start_age
+    r = required_rate(potA, 300, yrs)
+    rec(f"catchup_rate_from_{start_age}", r * 100, f"{r*100:.1f}%",
+        f"rate for $300/mo from {start_age} to match the 25-starter at 65 ({yrs}y)")
 
 with (HERE / "data_unit1_compounding.csv").open("w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=["name", "value", "display", "note"])

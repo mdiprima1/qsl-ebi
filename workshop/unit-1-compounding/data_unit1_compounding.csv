@@ -49,6 +49,16 @@ rosa_pot_77,1077000.0,"$1,100,000",rosa: end value at 7.7%
 rosa_safe_77,7381.64,"$7,400/mo",rosa: monthly payout to 95 at 7.7%
 rosa_pot_99,1099000.0,"$1,100,000",rosa: end value at 9.9%
 rosa_safe_99,9160.15,"$9,150/mo",rosa: monthly payout to 95 at 9.9%
-double_growth_engine,1.72,1.7y,"rule-of-72 doubling time: The Growth Engine, 2015-2026 window"
-double_diversifier,5.11,5.1y,"rule-of-72 doubling time: The Diversifier, 2015-2026 window"
+menu_defender,6.2,6.2%,"average annual return: The Defender, 2015-2026 window"
+double_defender,11.61,11.6y,"rule-of-72 doubling time: The Defender, 2015-2026 window"
+menu_6040,7.7,7.7%,"average annual return: 60/40 portfolio, 2005-2026"
+double_6040,9.35,9.4y,"rule-of-72 doubling time: 60/40 portfolio, 2005-2026"
+menu_spy_full,7.9,7.9%,"average annual return: SPY buy-and-hold, full history 1998-2026"
 double_spy_full,9.11,9.1y,"rule-of-72 doubling time: SPY buy-and-hold, full history 1998-2026"
+menu_diversifier,14.1,14.1%,"average annual return: The Diversifier, 2015-2026 window"
+double_diversifier,5.11,5.1y,"rule-of-72 doubling time: The Diversifier, 2015-2026 window"
+menu_growth_engine,41.8,41.8%,"average annual return: The Growth Engine, 2015-2026 window"
+double_growth_engine,1.72,1.7y,"rule-of-72 doubling time: The Growth Engine, 2015-2026 window"
+catchup_rate_from_35,11.87,11.9%,rate for $300/mo from 35 to match the 25-starter at 65 (30y)
+catchup_rate_from_40,15.54,15.5%,rate for $300/mo from 40 to match the 25-starter at 65 (25y)
+catchup_rate_from_45,21.58,21.6%,rate for $300/mo from 45 to match the 25-starter at 65 (20y)
