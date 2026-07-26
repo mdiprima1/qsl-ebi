@@ -1,0 +1,22 @@
+name,value,display,note
+saver_early_end_65,892000.87,"$890,000","$300/mo at 7.7%, age 25 to 65 (40y)"
+saver_late_end_65,399484.01,"$400,000","$300/mo at 7.7%, age 35 to 65 (30y)"
+saver_early_contrib,144000,"$144,000","total deposits, 480 months"
+saver_late_contrib,108000,"$108,000","total deposits, 360 months"
+contrib_gap_pct,25.0,25%,late saver deposited 25% less
+contrib_ratio,1.33,1.33x,early deposits / late deposits (a third more)
+end_gap_ratio,2.23,2.23x,early ending / late ending
+formula_step_100k,107700.0,"$107,700","$100,000 x 1.077, one year"
+grow_y1_start,100000.0,"$100,000",balance entering year 1
+grow_y1_earned,7700.0,"$7,700",earned during year 1 at 7.7%
+grow_y2_start,107700.0,"$107,700",balance entering year 2
+grow_y2_earned,8292.9,"$8,293",earned during year 2 at 7.7%
+grow_y3_start,115992.9,"$115,993",balance entering year 3
+grow_y3_earned,8931.45,"$8,931",earned during year 3 at 7.7%
+grow_y10_start,194958.12,"$194,958",balance entering year 10
+grow_y10_earned,15011.78,"$15,012",earned during year 10 at 7.7%
+grow_y30_start,859518.83,"$859,519",balance entering year 30
+grow_y30_earned,66182.95,"$66,183",earned during year 30 at 7.7%
+t500_rate2,365722.13,"$365,000","$500/mo, 40y at 2.0% savings account"
+t500_rate77,1486668.11,"$1,500,000","$500/mo, 40y at 7.7% 60/40 portfolio 2005-2026"
+t500_rate99,2699650.11,"$2,700,000","$500/mo, 40y at 9.9% S&P 500 2005-2026"

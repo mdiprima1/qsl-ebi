@@ -1,0 +1,142 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>QSL — compounding, the five-slide sequence (Unit 1)</title><style>
+:root{--paper:#FDFBF6;--paper-3:#ECE6D6;--rule:#D9D2BE;--ink-3:#595447;--ink-2:#3A3833;--ink-1:#1A1A1A;
+--accent:#B8902C;--accent-ink:#7A5C15;--data-2:#4A6B8A;
+--fd:"Source Serif 4","Source Serif Pro",Georgia,serif;--fb:"Inter",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+--fm:"JetBrains Mono","SF Mono",Menlo,Consolas,monospace}
+body{background:#3A3833;margin:0;padding:36px;font-family:var(--fb)}
+.which{color:#E8E3D4;font:600 14px var(--fm);letter-spacing:.08em;margin:34px 0 10px}
+.slide{position:relative;width:1280px;height:720px;background:var(--paper);box-shadow:0 8px 40px rgba(0,0,0,.4)}
+.logo{position:absolute;top:16px;left:16px;font:700 17px var(--fd);color:var(--ink-1)}
+.chrome-l{position:absolute;bottom:14px;left:16px;font:400 12.5px var(--fm);color:var(--ink-3)}
+.chrome-r{position:absolute;bottom:14px;right:16px;font:400 13px var(--fm);color:var(--ink-3)}
+.pad{position:absolute;inset:54px 56px 84px}
+.eyebrow{font:600 15px var(--fb);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
+h1{font:500 46px/1.1 var(--fd);color:var(--ink-1);margin:8px 0 0}
+.goldrule{width:44px;height:3px;background:var(--accent);margin:16px 0 0}
+.grid2{display:grid;grid-template-columns:480px 1fr;gap:52px;margin-top:26px;align-items:start}
+.points{margin:6px 0 0;padding:0;list-style:none}
+.points li{position:relative;font:400 20px/1.5 var(--fb);color:var(--ink-2);padding:0 0 20px 24px}
+.points li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.points strong{color:var(--ink-1);font-weight:600}
+.points-wide{max-width:1050px}
+.points-wide li{padding-bottom:38px;font-size:22px}
+.legend{display:flex;gap:22px;margin-top:10px;font:400 15px var(--fb);color:var(--ink-2)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:-1px}
+.tiles{display:grid;grid-template-rows:repeat(2,1fr);gap:18px;margin-top:8px}
+.tile{border-left:3px solid var(--accent);padding:10px 0 10px 22px}
+.tile .num{font:500 52px var(--fd);color:var(--ink-1)}
+.tile .lab{font:600 14px var(--fb);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin-top:2px}
+.tile .sub{font:400 15px var(--fb);color:var(--ink-3);margin-top:3px}
+.qbox{border-left:3px solid var(--accent);background:#F6F1E4;padding:20px 26px;margin-top:6px}
+.qbox .qlab{font:600 13px var(--fb);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+.qbox .q{font:500 25px/1.35 var(--fd);color:var(--ink-1);margin-top:8px}
+.formula{border-left:3px solid var(--accent);background:#F6F1E4;padding:26px 30px;margin-top:4px}
+.formula .f{font:500 34px var(--fd);color:var(--ink-1)}
+.formula .syms{margin-top:18px;font:400 17px/1.7 var(--fb);color:var(--ink-2)}
+.formula .syms b{font-family:var(--fd);font-weight:600;color:var(--ink-1)}
+.rows{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.row{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.row .k{font:400 16px var(--fb);color:var(--ink-3);min-width:76px}
+.row .v{font:600 23px var(--fd);color:var(--ink-1);white-space:nowrap}
+.row .d{font:400 13.5px var(--fb);color:var(--ink-3);margin-left:auto;text-align:right;max-width:170px}
+</style></head><body>
+
+<div class="which">SLIDE 1 — SCENARIO</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>Two savers, ten years apart</h1><div class="goldrule"></div>
+<div class="grid2">
+<div>
+<ul class="points">
+<li>Two people each invest <strong>$300 a month</strong> in the same portfolio, earning 7.7% a year — the average annual return of a classic 60/40 portfolio from 2005 to 2026.</li>
+<li>One starts at <strong>25</strong>. The other starts at <strong>35</strong>. Both keep going until 65.</li>
+<li>By 65 the early starter has deposited $144,000; the late starter $108,000 — 25% less.</li>
+</ul>
+<div class="qbox"><div class="qlab">Before the next slide</div>
+<div class="q">The late starter put in 25% less money. Does he end 25% behind at 65 — or further? How far apart do they finish?</div></div>
+</div>
+<div><svg viewBox="0 0 1000 420" width="100%" style="border-left:1px solid var(--paper-3);border-bottom:1px solid var(--paper-3)"><line x1="0" y1="306.8" x2="1000" y2="306.8" stroke="#ECE6D6"/><text x="6" y="300.8" font-size="15" fill="#595447" font-family="JetBrains Mono,monospace">$250k</text><line x1="0" y1="193.6" x2="1000" y2="193.6" stroke="#ECE6D6"/><text x="6" y="187.6" font-size="15" fill="#595447" font-family="JetBrains Mono,monospace">$500k</text><line x1="0" y1="80.4" x2="1000" y2="80.4" stroke="#ECE6D6"/><text x="6" y="74.4" font-size="15" fill="#595447" font-family="JetBrains Mono,monospace">$750k</text>
+<polyline points="0.0,420.0 25.0,418.3 50.0,416.5 75.0,414.5 100.0,412.4 125.0,410.2 150.0,407.7 175.0,405.1 200.0,402.3 225.0,399.2 250.0,395.9 275.0,392.4 300.0,388.6 325.0,384.4 350.0,380.0 375.0,375.3 400.0,370.1 425.0,364.6 450.0,358.6 475.0,352.2 500.0,345.3 525.0,337.9 550.0,329.9 575.0,321.3 600.0,312.0 625.0,302.0 650.0,291.2 675.0,279.6 700.0,267.1 725.0,253.6 750.0,239.1 775.0,223.5 800.0,206.7 825.0,188.6 850.0,169.1 875.0,148.1 900.0,125.5 925.0,101.1 950.0,74.9 975.0,46.6 1000.0,16.2" fill="none" stroke="#B8902C" stroke-width="2.6"/>
+<polyline points="0.0,420.0 25.0,420.0 50.0,420.0 75.0,420.0 100.0,420.0 125.0,420.0 150.0,420.0 175.0,420.0 200.0,420.0 225.0,420.0 250.0,420.0 275.0,418.3 300.0,416.5 325.0,414.5 350.0,412.4 375.0,410.2 400.0,407.7 425.0,405.1 450.0,402.3 475.0,399.2 500.0,395.9 525.0,392.4 550.0,388.6 575.0,384.4 600.0,380.0 625.0,375.3 650.0,370.1 675.0,364.6 700.0,358.6 725.0,352.2 750.0,345.3 775.0,337.9 800.0,329.9 825.0,321.3 850.0,312.0 875.0,302.0 900.0,291.2 925.0,279.6 950.0,267.1 975.0,253.6 1000.0,239.1" fill="none" stroke="#4A6B8A" stroke-width="2.6"/></svg>
+<div class="legend"><span><span class="dot" style="background:#B8902C"></span>Starts at 25</span>
+<span><span class="dot" style="background:#4A6B8A"></span>Starts at 35</span>
+<span style="color:var(--ink-3)">Account value, age 25 to 65 · $300/month · 7.7%/yr</span></div></div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py (compound growth, monthly deposits) · 7.7% = 60/40 portfolio average annual return, 2005–2026, QSL backtest</div>
+<div class="chrome-r">01 / 05</div></section>
+
+<div class="which">SLIDE 2 — INTUITION</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>The earliest money works the longest</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>A natural answer: the early starter deposited a third more — $144,000 against $108,000 — so he should finish about a third ahead.</li>
+<li>The chart says otherwise. At 65 the accounts stand at <strong>$890,000 against $400,000</strong> — the early starter finishes with more than twice as much. The deposits alone cannot explain that gap.</li>
+<li>What explains it: money that stays invested earns money, and those earnings stay invested and earn money of their own.</li>
+<li>The ten extra years belong to the <strong>earliest dollars</strong>. A dollar deposited at 25 has forty years to earn, and its earnings have decades to earn too.</li>
+</ul>
+<div class="tiles">
+<div class="tile"><div class="num">$890,000</div><div class="lab">Early starter at 65</div><div class="sub">$144,000 deposited over 40 years</div></div>
+<div class="tile"><div class="num">$400,000</div><div class="lab">Late starter at 65</div><div class="sub">$108,000 deposited over 30 years</div></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $300/month at 7.7%/yr · start 25 vs 35, read at 65</div>
+<div class="chrome-r">02 / 05</div></section>
+
+<div class="which">SLIDE 3 — DEFINITION</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>Compound growth</h1><div class="goldrule"></div>
+<div class="grid2" style="margin-top:56px">
+<ul class="points">
+<li><strong>Compound growth</strong> is growth on growth: an investment grows by a percentage of its current value, so each year&rsquo;s growth builds on all the growth that came before.</li>
+<li>One line of arithmetic describes it. Read the formula as a sentence: the starting amount, grown by the rate, once for every year.</li>
+<li>One step of it: $100,000 at 7.7% becomes <strong>$107,700</strong> after one year. The next year&rsquo;s 7.7% lands on $107,700, not on $100,000.</li>
+<li>The next slide walks the formula through thirty years.</li>
+</ul>
+<div class="formula">
+<div class="f">FV = P &times; (1 + r)<sup>n</sup></div>
+<div class="syms">
+<b>P</b> — the starting amount invested<br>
+<b>r</b> — the annual return, as a decimal: 7.7% is 0.077<br>
+<b>n</b> — the number of years the money stays invested<br>
+<b>FV</b> — the ending value after those years
+</div>
+</div>
+</div></div>
+<div class="chrome-r">03 / 05</div></section>
+
+<div class="which">SLIDE 4 — WORKED EXAMPLE</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>One hundred thousand dollars, thirty years</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>Take $100,000 growing at 7.7% a year — the same 60/40 average — and look at what single years earn.</li>
+<li>Year one earns $7,700. Year two starts from $107,700, so the same 7.7% earns <strong>$8,293</strong>.</li>
+<li>By year ten, the balance entering the year is $194,958 and the year earns <strong>$15,012</strong> — nearly double year one.</li>
+<li>By year thirty, a single year earns <strong>$66,183</strong> — more than eight times year one — with nothing added along the way.</li>
+</ul>
+<div class="rows">
+<div class="row"><span class="k">Year 1</span><span class="v">$100,000 &rarr; +$7,700</span><span class="d">the first year&rsquo;s earnings</span></div>
+<div class="row"><span class="k">Year 2</span><span class="v">$107,700 &rarr; +$8,293</span><span class="d">last year&rsquo;s earnings now earn too</span></div>
+<div class="row"><span class="k">Year 3</span><span class="v">$115,993 &rarr; +$8,931</span><span class="d">and again</span></div>
+<div class="row"><span class="k">Year 10</span><span class="v">$194,958 &rarr; +$15,012</span><span class="d">same 7.7%, on a larger balance</span></div>
+<div class="row"><span class="k">Year 30</span><span class="v">$859,519 &rarr; +$66,183</span><span class="d">one year, more than eight times year one</span></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $100,000 at 7.7%/yr, no deposits or withdrawals</div>
+<div class="chrome-r">04 / 05</div></section>
+
+<div class="which">SLIDE 5 — CONSIDERATIONS</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>What the steady rate leaves out</h1><div class="goldrule"></div>
+<ul class="points points-wide" style="margin-top:52px">
+<li><strong>No market pays the same rate every year.</strong> The 7.7% on these slides is an average over 2005–2026; the real path swings around it, some years far above, some far below. Later units measure those swings.</li>
+<li><strong>The rate and the years multiply.</strong> $500 a month for forty years ends at $365,000 at 2.0%, $1,500,000 at 7.7%, and $2,700,000 at 9.9%. The deposits are identical in every row — the return decides the size of the result.</li>
+<li><strong>The figures are before costs, taxes and inflation.</strong> Each takes its share of the ending value, and the course returns to all three.</li>
+<li><strong>The return number is the subject of this course.</strong> A difference of two percentage points, held for decades, separates outcomes by hundreds of thousands of dollars — which is why the rest of the course is about understanding, measuring, and choosing that return honestly.</li>
+</ul>
+</div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $500/month, 40 years, at 2.0% / 7.7% / 9.9%</div>
+<div class="chrome-r">05 / 05</div></section>
+
+</body></html>
