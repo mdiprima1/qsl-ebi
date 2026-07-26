@@ -1,0 +1,30 @@
+{
+  "comment": "Concept registry v0 (proof of concept). Every concept a student could meet in course text. policy: assumed_known (course prerequisites) | explain_on_first_use (must carry its one-line explanation at first use in its introducing unit) | named_only (may be named before its unit, never explained or relied on) | full_unit (owned by a unit; not usable before it). introduced_in: syllabus unit number. Corrections add or edit ONE entry here; the checker enforces it everywhere, permanently.",
+  "concepts": [
+    {"id": "stock", "aliases": ["stock", "stocks", "share", "shares"], "policy": "assumed_known", "source": "course prerequisite (hard-bans Ban 8 example)"},
+    {"id": "bond", "aliases": ["bond", "bonds"], "policy": "assumed_known", "source": "course prerequisite"},
+    {"id": "savings-account", "aliases": ["savings account"], "policy": "assumed_known", "source": "course prerequisite"},
+    {"id": "brokerage-account", "aliases": ["brokerage account"], "policy": "assumed_known", "source": "course prerequisite"},
+    {"id": "portfolio", "aliases": ["portfolio", "portfolios"], "introduced_in": 1, "policy": "explain_on_first_use", "first_use_must_contain": ["collection of investments"], "source": "Marco correction class, 2026-07-26"},
+    {"id": "portfolio-60-40", "aliases": ["60/40", "sixty forty", "sixty-forty"], "introduced_in": 1, "policy": "explain_on_first_use", "first_use_must_contain": ["60% stocks", "40% bonds"], "spoken_must_contain": ["sixty percent stocks", "forty percent bonds"], "source": "Marco correction, 2026-07-26: cannot assume the student knows what a 60/40 portfolio is"},
+    {"id": "sp500", "aliases": ["S&P 500", "S and P five hundred", "SPY"], "introduced_in": 1, "policy": "explain_on_first_use", "first_use_must_contain": ["500 largest"], "source": "same correction class: index needs a first-use line"},
+    {"id": "buy-and-hold", "aliases": ["buy and hold", "buy-and-hold"], "introduced_in": 1, "policy": "explain_on_first_use", "first_use_must_contain": ["buys once and holds"], "source": "same correction class"},
+    {"id": "average-annual-return", "aliases": ["average annual return"], "introduced_in": 3, "policy": "named_only", "named_only_requires_deferral": true, "deferral_phrases": ["later units show", "Unit 3 shows", "unit three shows", "how such numbers are measured", "how numbers like these are measured", "how a number like that is measured"], "source": "measurement is Unit 3's subject; naming allowed with a deferral pointer"},
+    {"id": "backtest", "aliases": ["backtest", "backtests", "backtested", "backtesting"], "introduced_in": 2, "policy": "named_only", "source": "Unit 2 introduces backtest engines; named-only before"},
+    {"id": "rules-based", "aliases": ["rules-based", "systematic strateg"], "introduced_in": 2, "policy": "named_only", "source": "method vocabulary; defined from Unit 2 on"},
+    {"id": "compounding", "aliases": ["compound growth", "compounding", "compound interest"], "introduced_in": 1, "policy": "full_unit", "source": "Unit 1 owns it"},
+    {"id": "volatility", "aliases": ["volatility", "standard deviation"], "introduced_in": 4, "policy": "full_unit", "source": "Unit 4 owns it; not before"},
+    {"id": "risk", "aliases": ["risky", " risk "], "introduced_in": 4, "policy": "named_only", "source": "named-only hook before Unit 4 (Marco 2026-07-26: hint, don't teach, in Unit 1)"},
+    {"id": "correlation", "aliases": ["correlation", "correlated"], "introduced_in": 5, "policy": "full_unit", "source": "Unit 5 owns it"},
+    {"id": "sharpe", "aliases": ["Sharpe"], "introduced_in": 6, "policy": "full_unit", "source": "Unit 6 owns it"},
+    {"id": "drawdown", "aliases": ["drawdown", "drawdowns"], "introduced_in": 4, "policy": "full_unit", "source": "risk vocabulary, Unit 4"},
+    {"id": "cagr", "aliases": ["CAGR"], "introduced_in": 3, "policy": "full_unit", "source": "Unit 3 owns return measurement"},
+    {"id": "beta", "aliases": [" beta "], "introduced_in": 6, "policy": "full_unit", "source": "risk-adjusted vocabulary"},
+    {"id": "momentum", "aliases": ["momentum"], "introduced_in": 9, "policy": "named_only", "source": "Unit 9; strategy names may be spoken earlier"},
+    {"id": "dividend", "aliases": ["dividend", "dividends"], "introduced_in": 8, "policy": "named_only", "source": "Unit 8 market mechanics"},
+    {"id": "fee", "aliases": ["fee", "fees", "fund expenses", "expense ratio"], "introduced_in": 1, "policy": "explain_on_first_use", "first_use_must_contain": ["annual fee"], "source": "Unit 1 teaches fee drag; plain first use"},
+    {"id": "inflation", "aliases": ["inflation"], "introduced_in": 24, "policy": "named_only", "source": "deferred to Chapter 5 constraints; naming with deferral allowed"},
+    {"id": "ensemble", "aliases": ["ensemble"], "introduced_in": 25, "policy": "full_unit", "source": "Unit 25"},
+    {"id": "strategy-names", "aliases": ["The Defender", "The Diversifier", "The Growth Engine"], "introduced_in": 1, "policy": "explain_on_first_use", "first_use_must_contain": ["strategies this course follows"], "source": "anchor strategies may be named from Unit 1 with their framing line"}
+  ]
+}
