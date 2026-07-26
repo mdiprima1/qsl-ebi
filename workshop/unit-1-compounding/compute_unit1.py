@@ -206,6 +206,43 @@ with (HERE / "chart_points.txt").open("w") as f:
     for gl in (250_000, 500_000, 750_000):
         f.write(f"gridline {gl:,}: y = {420 - gl / top * 420:.1f}\n")
 
+    # --- Chart geometry for the visual pass (rule viz-carries-the-lesson) ---
+    f.write("\n=== S03 scaled ending bars (width per $, 900px = $890k) ===\n")
+    for nm, end, dep in (("early", potA, contribA), ("late", potB, contribB)):
+        f.write(f"{nm}: ending {end/potA*900:.1f}px  deposits {dep/potA*900:.1f}px\n")
+    f.write("\n=== S04 yearly P&L bars (px per $, 160px = $31,025; sign by side of baseline) ===\n")
+    _prev2 = 100_000.0
+    _max_pnl = max(abs(_by_year[y] - p) for y, p in
+                   zip(sorted(_by_year), [100_000.0] + [_by_year[y] for y in sorted(_by_year)][:-1]))
+    _prev2 = 100_000.0
+    for _y in sorted(_by_year):
+        _pnl = _by_year[_y] - _prev2
+        f.write(f"{_y}: {abs(_pnl)/_max_pnl*160:.1f}px {'up' if _pnl>=0 else 'DOWN'} (${_pnl:+,.0f})\n")
+        _prev2 = _by_year[_y]
+    f.write("\n=== S05 real equity curve (viewBox 1000x420, sampled) ===\n")
+    _eq = qc["equity_daily"]
+    _top5 = max(v for _, v in _eq) * 1.04
+    _o0, _oN = _eq[0][0], _eq[-1][0]
+    _sample = _eq[::9]
+    f.write(" ".join(f"{(_o-_o0)/(_oN-_o0)*1000:.1f},{420 - _v/_top5*420:.1f}" for _o, _v in _sample) + "\n")
+    f.write(f"y top = {_top5:,.0f}; gridline 150k y={420-150000/_top5*420:.1f}; 200k y={420-200000/_top5*420:.1f}; 250k y={420-250000/_top5*420:.1f}; end point x=1000 y={420-_eq[-1][1]/_top5*420:.1f}\n")
+    f.write("\n=== S08 deposits line ($240k on 300px=$2.7M scale) ===\n")
+    f.write(f"y from baseline = {240_000/2_700_000*300:.1f}px\n")
+    f.write("\n=== S09/S10 comparison bars (220px = larger value) ===\n")
+    f.write(f"S09: $3,600 -> {3600/67000*220:.1f}px · $67,000 -> 220px\n")
+    f.write(f"S10: $300 -> {300/670*220:.1f}px · $670 -> 220px\n")
+    f.write("\n=== S19 rate bars (340px = 41.8%) ===\n")
+    for pct, nm in ((6.2, "defender"), (7.7, "6040"), (7.9, "spy"), (14.1, "diversifier"), (41.8, "growth")):
+        f.write(f"{nm}: {pct/41.8*340:.1f}px\n")
+    f.write("\n=== S22 rate ladder (x = rate/45*1000, viewBox 1000 wide) ===\n")
+    for pct, nm in ((6.2, "Defender"), (7.7, "60/40"), (7.9, "SPY"), (14.1, "Diversifier"), (41.8, "Growth Engine")):
+        f.write(f"menu {nm}: x={pct/45*1000:.1f}\n")
+    for age, pct in ((25, 7.7), (35, 11.9), (40, 15.5), (45, 21.6)):
+        f.write(f"required from {age}: x={pct/45*1000:.1f}\n")
+    f.write("\n=== S23 doubling staircase (18px per unit) ===\n")
+    for n, v in ((0, 1), (1, 2), (2, 4), (3, 8), (4, 16)):
+        f.write(f"double {n}: value {v} -> {v*18}px\n")
+
 print(f"{len(rows)} rows -> data_unit1_compounding.csv")
 for r in rows:
     print(f"  {r['name']:24s} {r['display']:>12s}  {r['note']}")
