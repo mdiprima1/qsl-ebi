@@ -321,10 +321,20 @@ table.mt td strong{color:var(--ink-1)}
 <li>$300 a month until 65. Each row: her account at 65, and the monthly amount it can then pay her to 95, keeping a fifth in reserve.</li>
 <li>The saving is identical in the three rows; the retirement it buys is not.</li>
 </ul>
-<div class="rows">
-<div class="row"><span class="k">0.38%</span><span class="v">$170,000 &rarr; $400/mo</span><span class="d">savings account &middot; FDIC national average, Jul 2026</span></div>
-<div class="row"><span class="k">7.7%</span><span class="v">$1,150,000 &rarr; $7,650/mo</span><span class="d">60/40 portfolio, 2005–2026</span></div>
-<div class="row"><span class="k">9.9%</span><span class="v">$2,150,000 &rarr; $18,000/mo</span><span class="d">S&amp;P 500, 2005–2026</span></div>
+<div>
+<div class="blab">Her monthly retirement income, drawn to one scale</div>
+<svg viewBox="0 0 1000 300" width="100%">
+<text x="0" y="58" font-size="16" fill="#3A3833" font-family="Inter,sans-serif">0.38%</text>
+<rect x="92" y="30" width="18.2" height="44" fill="#B8902C"/>
+<text x="122.2" y="58" font-size="17" font-weight="600" fill="#1A1A1A" font-family="Georgia,serif">$400/mo &middot; from $170,000</text>
+<text x="0" y="150" font-size="16" fill="#3A3833" font-family="Inter,sans-serif">7.7%</text>
+<rect x="92" y="122" width="348.5" height="44" fill="#B8902C"/>
+<text x="452.5" y="150" font-size="17" font-weight="600" fill="#1A1A1A" font-family="Georgia,serif">$7,650/mo &middot; from $1,150,000</text>
+<text x="0" y="242" font-size="16" fill="#3A3833" font-family="Inter,sans-serif">9.9%</text>
+<rect x="92" y="214" width="820.0" height="44" fill="#B8902C"/>
+<text x="900" y="242" text-anchor="end" font-size="17" font-weight="600" fill="#F4F0E7" font-family="Georgia,serif">$18,000/mo &middot; from $2,150,000</text>
+</svg>
+<div class="legend"><span style="color:var(--ink-3)">Payouts to age 95, fifth in reserve &middot; 0.38% = FDIC nat. avg savings, Jul 2026 &middot; 7.7% = 60/40, 9.9% = S&amp;P 500, both 2005&ndash;2026</span></div>
 </div>
 </div></div>
 <div class="chrome-l">Source: computed in compute_unit1.py · $0 start · $300/month · payouts 65 to 95, fifth in reserve</div>
@@ -338,10 +348,20 @@ table.mt td strong{color:var(--ink-1)}
 <li>$50,000 saved, $1,000 a month, twenty years to go. Each row: his account at 60, and the monthly payout from there to 95.</li>
 <li>Twenty years is enough for the rate to matter enormously. Whether Daniel can stop at 60 is as much a return question as a savings question.</li>
 </ul>
-<div class="rows">
-<div class="row"><span class="k">0.38%</span><span class="v">$305,000 &rarr; $650/mo</span><span class="d">savings account &middot; FDIC national average, Jul 2026</span></div>
-<div class="row"><span class="k">7.7%</span><span class="v">$770,000 &rarr; $5,100/mo</span><span class="d">60/40 portfolio, 2005–2026</span></div>
-<div class="row"><span class="k">9.9%</span><span class="v">$1,050,000 &rarr; $8,450/mo</span><span class="d">S&amp;P 500, 2005–2026</span></div>
+<div>
+<div class="blab">His monthly income from 60, drawn to one scale</div>
+<svg viewBox="0 0 1000 300" width="100%">
+<text x="0" y="58" font-size="16" fill="#3A3833" font-family="Inter,sans-serif">0.38%</text>
+<rect x="92" y="30" width="63.1" height="44" fill="#B8902C"/>
+<text x="167.1" y="58" font-size="17" font-weight="600" fill="#1A1A1A" font-family="Georgia,serif">$650/mo &middot; from $305,000</text>
+<text x="0" y="150" font-size="16" fill="#3A3833" font-family="Inter,sans-serif">7.7%</text>
+<rect x="92" y="122" width="494.9" height="44" fill="#B8902C"/>
+<text x="598.9" y="150" font-size="17" font-weight="600" fill="#1A1A1A" font-family="Georgia,serif">$5,100/mo &middot; from $770,000</text>
+<text x="0" y="242" font-size="16" fill="#3A3833" font-family="Inter,sans-serif">9.9%</text>
+<rect x="92" y="214" width="820.0" height="44" fill="#B8902C"/>
+<text x="900" y="242" text-anchor="end" font-size="17" font-weight="600" fill="#F4F0E7" font-family="Georgia,serif">$8,450/mo &middot; from $1,050,000</text>
+</svg>
+<div class="legend"><span style="color:var(--ink-3)">Payouts 60 to 95, fifth in reserve &middot; 0.38% = FDIC nat. avg savings, Jul 2026 &middot; 7.7% = 60/40, 9.9% = S&amp;P 500, both 2005&ndash;2026</span></div>
 </div>
 </div></div>
 <div class="chrome-l">Source: computed in compute_unit1.py · $50,000 start · $1,000/month · payouts 60 to 95, fifth in reserve</div>
@@ -356,10 +376,20 @@ table.mt td strong{color:var(--ink-1)}
 <li>The saving is finished; the return is not. During thirty years of payouts the remaining money keeps compounding, and the rate decides how fast the pot refills as it drains.</li>
 <li>The same million produces three very different retirements.</li>
 </ul>
-<div class="rows">
-<div class="row"><span class="k">0.38%</span><span class="v">$2,500/mo</span><span class="d">savings account &middot; FDIC national average, Jul 2026</span></div>
-<div class="row"><span class="k">7.7%</span><span class="v">$7,400/mo</span><span class="d">60/40 portfolio, 2005–2026</span></div>
-<div class="row"><span class="k">9.9%</span><span class="v">$9,150/mo</span><span class="d">S&amp;P 500, 2005–2026</span></div>
+<div>
+<div class="blab">What the same million pays each month, drawn to one scale</div>
+<svg viewBox="0 0 1000 300" width="100%">
+<text x="0" y="58" font-size="16" fill="#3A3833" font-family="Inter,sans-serif">0.38%</text>
+<rect x="92" y="30" width="224.0" height="44" fill="#B8902C"/>
+<text x="328.0" y="58" font-size="17" font-weight="600" fill="#1A1A1A" font-family="Georgia,serif">$2,500/mo</text>
+<text x="0" y="150" font-size="16" fill="#3A3833" font-family="Inter,sans-serif">7.7%</text>
+<rect x="92" y="122" width="663.2" height="44" fill="#B8902C"/>
+<text x="767.2" y="150" font-size="17" font-weight="600" fill="#1A1A1A" font-family="Georgia,serif">$7,400/mo</text>
+<text x="0" y="242" font-size="16" fill="#3A3833" font-family="Inter,sans-serif">9.9%</text>
+<rect x="92" y="214" width="820.0" height="44" fill="#B8902C"/>
+<text x="900" y="242" text-anchor="end" font-size="17" font-weight="600" fill="#F4F0E7" font-family="Georgia,serif">$9,150/mo</text>
+</svg>
+<div class="legend"><span style="color:var(--ink-3)">Payouts 65 to 95, fifth in reserve &middot; 0.38% = FDIC nat. avg savings, Jul 2026 &middot; 7.7% = 60/40, 9.9% = S&amp;P 500, both 2005&ndash;2026</span></div>
 </div>
 </div></div>
 <div class="chrome-l">Source: computed in compute_unit1.py · $1,000,000 at 65 · payouts to 95, fifth in reserve</div>
@@ -507,6 +537,7 @@ table.mt td strong{color:var(--ink-1)}
 <li><strong>If you are catching up, your plan depends more on the rate</strong> — which means the work of choosing it carefully is worth more to you, not less. You are in the right place.</li>
 </ul>
 </div>
+<div class="chrome-l">Menu rates: QSL backtests, windows as stated &middot; required rates and ladder geometry computed in compute_unit1.py</div>
 <div class="chrome-r">22 / 26</div></section>
 
 <div class="which">SLIDE 23 — THE RULE OF 72</div>

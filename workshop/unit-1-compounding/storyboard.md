@@ -14,9 +14,9 @@
 | 08 | Lever 1 — the rate | 3 bars: $260k / $1.5M / $2.7M ($500/mo, 40y; deposits noted on the savings bar) | The rate and the years |
 | 09 | Lever 2 — the years | scaled bars: $3,600 vs $67,000 (18.6×) | The rate and the years |
 | 10 | Catching up with money alone | scaled bars: $300/mo vs $670/mo | The rate and the years |
-| 11 | Maya, 22 — starting from zero | rows at 0.38/7.7/9.9%: pot → monthly payout | Three lives |
-| 12 | Daniel, 40 — stopping at 60 | rows at 0.38/7.7/9.9% | Three lives |
-| 13 | Rosa, 65 — the formula backward | rows: $1M → payout at three rates | Three lives |
+| 11 | Maya, 22 — starting from zero | payout bars to one scale (18.2→820px) + pot labels | Three lives |
+| 12 | Daniel, 40 — stopping at 60 | payout bars to one scale | Three lives |
+| 13 | Rosa, 65 — the formula backward | payout bars to one scale: $2,500 / $7,400 / $9,150 per month | Three lives |
 | 14 | What the three cases share | points: deposits fixed, return moved results by multiples | Three lives |
 | 15 | Why the eye underestimates growth | real curve vs extended early slope; the gap labeled 'the underestimate' | Why the eye underestimates |
 | 16 | Calculate, don't guess | points: the two mistakes the bias invites | Why the eye underestimates |
