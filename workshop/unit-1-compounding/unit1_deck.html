@@ -1,0 +1,488 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>QSL — Unit 1: Compounding — full deck (26 slides)</title><style>
+:root{--paper:#FDFBF6;--paper-3:#ECE6D6;--rule:#D9D2BE;--ink-3:#595447;--ink-2:#3A3833;--ink-1:#1A1A1A;
+--accent:#B8902C;--accent-ink:#7A5C15;--data-2:#4A6B8A;--data-pos:#2E7D5B;--data-neg:#A63D2A;
+--dark-bg:#0F1418;--dark-ink:#E8E3D4;--dark-ink-2:#A8A193;
+--fd:"Source Serif 4","Source Serif Pro",Georgia,serif;--fb:"Inter",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+--fm:"JetBrains Mono","SF Mono",Menlo,Consolas,monospace}
+body{background:#3A3833;margin:0;padding:36px;font-family:var(--fb)}
+.which{color:#E8E3D4;font:600 14px var(--fm);letter-spacing:.08em;margin:34px 0 10px}
+.slide{position:relative;width:1280px;height:720px;background:var(--paper);box-shadow:0 8px 40px rgba(0,0,0,.4)}
+.slide.dark{background:var(--dark-bg)}
+.logo{position:absolute;top:16px;left:16px;font:700 17px var(--fd);color:var(--ink-1)}
+.dark .logo{color:var(--dark-ink)}
+.chrome-l{position:absolute;bottom:14px;left:16px;font:400 12.5px var(--fm);color:var(--ink-3)}
+.chrome-r{position:absolute;bottom:14px;right:16px;font:400 13px var(--fm);color:var(--ink-3)}
+.dark .chrome-l,.dark .chrome-r{color:var(--dark-ink-2)}
+.pad{position:absolute;inset:54px 56px 84px}
+.eyebrow{font:600 15px var(--fb);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
+.dark .eyebrow{color:var(--accent)}
+h1{font:500 46px/1.1 var(--fd);color:var(--ink-1);margin:8px 0 0}
+.dark h1{color:var(--dark-ink);font-size:58px}
+.goldrule{width:44px;height:3px;background:var(--accent);margin:16px 0 0}
+.grid2{display:grid;grid-template-columns:480px 1fr;gap:52px;margin-top:26px;align-items:start}
+.points{margin:6px 0 0;padding:0;list-style:none}
+.points li{position:relative;font:400 20px/1.5 var(--fb);color:var(--ink-2);padding:0 0 20px 24px}
+.points li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.points strong{color:var(--ink-1);font-weight:600}
+.dark .points li{color:var(--dark-ink);font-size:24px;padding-bottom:26px}
+.points-wide{max-width:1050px}
+.points-wide li{padding-bottom:34px;font-size:22px}
+.legend{display:flex;gap:22px;margin-top:10px;font:400 15px var(--fb);color:var(--ink-2)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:-1px}
+.tiles{display:grid;grid-template-rows:repeat(2,1fr);gap:18px;margin-top:8px}
+.tile{border-left:3px solid var(--accent);padding:10px 0 10px 22px}
+.tile .num{font:500 52px var(--fd);color:var(--ink-1)}
+.tile .lab{font:600 14px var(--fb);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);margin-top:2px}
+.tile .sub{font:400 15px var(--fb);color:var(--ink-3);margin-top:3px}
+.qbox{border-left:3px solid var(--accent);background:#F6F1E4;padding:20px 26px;margin-top:6px}
+.qbox .qlab{font:600 13px var(--fb);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+.qbox .q{font:500 25px/1.35 var(--fd);color:var(--ink-1);margin-top:8px}
+.formula{border-left:3px solid var(--accent);background:#F6F1E4;padding:26px 30px;margin-top:4px}
+.formula .f{font:500 34px var(--fd);color:var(--ink-1)}
+.formula .syms{margin-top:18px;font:400 17px/1.7 var(--fb);color:var(--ink-2)}
+.formula .syms b{font-family:var(--fd);font-weight:600;color:var(--ink-1)}
+.rows{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.row{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.row .k{font:400 16px var(--fb);color:var(--ink-3);min-width:76px}
+.row .v{font:600 23px var(--fd);color:var(--ink-1);white-space:nowrap}
+.row .d{font:400 13.5px var(--fb);color:var(--ink-3);margin-left:auto;text-align:right;max-width:170px}
+table.mt{border-collapse:collapse;width:100%;margin-top:10px}
+table.mt th{font:600 14px var(--fb);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);text-align:left;padding:10px 14px;border-bottom:2px solid var(--accent)}
+table.mt td{font:400 21px var(--fb);color:var(--ink-2);padding:13px 14px;border-bottom:1px solid var(--rule)}
+table.mt td.num{font:600 24px var(--fd);color:var(--ink-1);white-space:nowrap}
+table.mt td strong{color:var(--ink-1)}
+.bars{display:flex;align-items:flex-end;gap:56px;height:340px;margin-top:30px;padding-left:8px}
+.bar{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.bar .val{font:600 24px var(--fd);color:var(--ink-1);margin-bottom:8px}
+.bar .col{width:120px;background:var(--accent)}
+.bar .col.b2{background:var(--data-2)}
+.bar .col.neg{background:var(--data-neg)}
+.bar .cap{font:400 15px var(--fb);color:var(--ink-3);margin-top:10px;text-align:center}
+.kp-list{margin-top:34px}
+.kp{display:flex;gap:18px;align-items:baseline;padding:14px 0;border-bottom:1px solid #232B33}
+.kp-n{font:600 15px var(--fm);color:var(--accent)}
+.kp-t{font:400 24px var(--fb);color:var(--dark-ink)}
+</style></head><body>
+
+<div class="which">SLIDE 01 — OPENER</div>
+<section class="slide dark"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">QSL · Evidence-Based Investing for Everyone · Unit 1</div>
+<h1>Compounding — the superpower many forget</h1><div class="goldrule"></div>
+<div class="kp-list">
+<div class="kp"><span class="kp-n">01</span><span class="kp-t">Money that stays invested earns money of its own</span></div>
+<div class="kp"><span class="kp-n">02</span><span class="kp-t">One line of arithmetic decides what savings become</span></div>
+<div class="kp"><span class="kp-n">03</span><span class="kp-t">Two levers: the years, and the rate</span></div>
+<div class="kp"><span class="kp-n">04</span><span class="kp-t">Every number computed, its source stated</span></div>
+</div>
+</div>
+<div class="chrome-l">No strategy on these slides yet — the arithmetic first, and what it makes possible</div>
+<div class="chrome-r">01 / 26</div></section>
+
+<div class="which">SLIDE 02 — SCENARIO</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>Two savers, ten years apart</h1><div class="goldrule"></div>
+<div class="grid2">
+<div>
+<ul class="points">
+<li>Two people each invest <strong>$300 a month</strong> in the same portfolio, earning 7.7% a year — the average annual return of a classic 60/40 portfolio from 2005 to 2026.</li>
+<li>One starts at <strong>25</strong>. The other starts at <strong>35</strong>. Both keep going until 65.</li>
+<li>By 65 the early starter has deposited $144,000; the late starter $108,000 — 25% less.</li>
+</ul>
+<div class="qbox"><div class="qlab">Commit to a guess</div>
+<div class="q">The late starter put in 25% less money. Does he end 25% behind at 65 — or further?</div></div>
+</div>
+<div><svg viewBox="0 0 1000 420" width="100%" style="border-left:1px solid var(--paper-3);border-bottom:1px solid var(--paper-3)"><line x1="0" y1="306.8" x2="1000" y2="306.8" stroke="#ECE6D6"/><text x="6" y="300.8" font-size="15" fill="#595447" font-family="JetBrains Mono,monospace">$250k</text><line x1="0" y1="193.6" x2="1000" y2="193.6" stroke="#ECE6D6"/><text x="6" y="187.6" font-size="15" fill="#595447" font-family="JetBrains Mono,monospace">$500k</text><line x1="0" y1="80.4" x2="1000" y2="80.4" stroke="#ECE6D6"/><text x="6" y="74.4" font-size="15" fill="#595447" font-family="JetBrains Mono,monospace">$750k</text>
+<polyline points="0.0,420.0 25.0,418.3 50.0,416.5 75.0,414.5 100.0,412.4 125.0,410.2 150.0,407.7 175.0,405.1 200.0,402.3 225.0,399.2 250.0,395.9 275.0,392.4 300.0,388.6 325.0,384.4 350.0,380.0 375.0,375.3 400.0,370.1 425.0,364.6 450.0,358.6 475.0,352.2 500.0,345.3 525.0,337.9 550.0,329.9 575.0,321.3 600.0,312.0 625.0,302.0 650.0,291.2 675.0,279.6 700.0,267.1 725.0,253.6 750.0,239.1 775.0,223.5 800.0,206.7 825.0,188.6 850.0,169.1 875.0,148.1 900.0,125.5 925.0,101.1 950.0,74.9 975.0,46.6 1000.0,16.2" fill="none" stroke="#B8902C" stroke-width="2.6"/>
+<polyline points="0.0,420.0 25.0,420.0 50.0,420.0 75.0,420.0 100.0,420.0 125.0,420.0 150.0,420.0 175.0,420.0 200.0,420.0 225.0,420.0 250.0,420.0 275.0,418.3 300.0,416.5 325.0,414.5 350.0,412.4 375.0,410.2 400.0,407.7 425.0,405.1 450.0,402.3 475.0,399.2 500.0,395.9 525.0,392.4 550.0,388.6 575.0,384.4 600.0,380.0 625.0,375.3 650.0,370.1 675.0,364.6 700.0,358.6 725.0,352.2 750.0,345.3 775.0,337.9 800.0,329.9 825.0,321.3 850.0,312.0 875.0,302.0 900.0,291.2 925.0,279.6 950.0,267.1 975.0,253.6 1000.0,239.1" fill="none" stroke="#4A6B8A" stroke-width="2.6"/></svg>
+<div class="legend"><span><span class="dot" style="background:#B8902C"></span>Starts at 25</span>
+<span><span class="dot" style="background:#4A6B8A"></span>Starts at 35</span>
+<span style="color:var(--ink-3)">Account value, age 25 to 65 · $300/month · 7.7%/yr</span></div></div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · 7.7% = 60/40 portfolio average annual return, 2005–2026, QSL backtest</div>
+<div class="chrome-r">02 / 26</div></section>
+
+<div class="which">SLIDE 03 — THE ANSWER</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>Less than half</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>At 65 the accounts stand at <strong>$890,000 against $400,000</strong>.</li>
+<li>The late starter deposited 25% less — and finishes <strong>55% behind</strong>.</li>
+<li>The deposits cannot explain the gap. Something else in the account did most of the work.</li>
+<li>The rest of this unit explains that gap — and, near the end, what it means if your situation is the second curve.</li>
+</ul>
+<div class="tiles">
+<div class="tile"><div class="num">$890,000</div><div class="lab">Started at 25</div><div class="sub">$144,000 deposited over 40 years</div></div>
+<div class="tile"><div class="num">$400,000</div><div class="lab">Started at 35</div><div class="sub">$108,000 deposited over 30 years</div></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $300/month at 7.7%/yr · read at 65</div>
+<div class="chrome-r">03 / 26</div></section>
+
+<div class="which">SLIDE 04 — THE MECHANISM</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>Money earning money</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>Take $100,000 growing at 7.7% a year, no deposits, no withdrawals — and watch single years.</li>
+<li>Each year's earnings stay in the account. Next year, the same 7.7% lands on a <strong>larger balance</strong>.</li>
+<li>The rate never changes. The balance it lands on does — and by year thirty, one year earns more than eight times what year one earned.</li>
+</ul>
+<div class="rows">
+<div class="row"><span class="k">Year 1</span><span class="v">$100,000 &rarr; +$7,700</span><span class="d">the first year&rsquo;s earnings</span></div>
+<div class="row"><span class="k">Year 2</span><span class="v">$107,700 &rarr; +$8,293</span><span class="d">last year&rsquo;s earnings now earn too</span></div>
+<div class="row"><span class="k">Year 3</span><span class="v">$115,993 &rarr; +$8,931</span><span class="d">and again</span></div>
+<div class="row"><span class="k">Year 10</span><span class="v">$194,958 &rarr; +$15,012</span><span class="d">same 7.7%, on a larger balance</span></div>
+<div class="row"><span class="k">Year 30</span><span class="v">$859,519 &rarr; +$66,183</span><span class="d">one year, more than eight times year one</span></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $100,000 at 7.7%/yr</div>
+<div class="chrome-r">04 / 26</div></section>
+
+<div class="which">SLIDE 05 — FORTY YEARS</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>After forty years</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>Run the same account to year forty.</li>
+<li>The $100,000 has become about <strong>$1,950,000</strong> — 19.4 times where it began.</li>
+<li>Nothing was added along the way. Growth applied to previous growth did all of it.</li>
+<li>The account did not grow by the same dollars each year. It grew by the same <strong>proportion</strong> of an ever-larger base.</li>
+</ul>
+<div class="tiles">
+<div class="tile"><div class="num">$1,950,000</div><div class="lab">Value at year 40</div><div class="sub">$100,000 at 7.7%/yr, untouched</div></div>
+<div class="tile"><div class="num">19.4&times;</div><div class="lab">The starting amount, multiplied</div><div class="sub">the same 7.7%, applied forty times</div></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $100,000 at 7.7%/yr, 40 years</div>
+<div class="chrome-r">05 / 26</div></section>
+
+<div class="which">SLIDE 06 — DEFINITION</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>Compound growth</h1><div class="goldrule"></div>
+<div class="grid2" style="margin-top:56px">
+<ul class="points">
+<li><strong>Compound growth</strong> is growth on growth: an investment grows by a percentage of its current value, so each year&rsquo;s growth builds on all the growth that came before.</li>
+<li>Read the formula as a sentence: the starting amount, grown by the rate, once for every year.</li>
+<li>One step of it: $100,000 &times; 1.077 = <strong>$107,700</strong>. The next year&rsquo;s 7.7% lands on $107,700, not on $100,000.</li>
+</ul>
+<div class="formula">
+<div class="f">FV = P &times; (1 + r)<sup>n</sup></div>
+<div class="syms">
+<b>P</b> — the starting amount invested<br>
+<b>r</b> — the annual return, as a decimal: 7.7% is 0.077<br>
+<b>n</b> — the number of years the money stays invested<br>
+<b>FV</b> — the ending value after those years
+</div>
+</div>
+</div></div>
+<div class="chrome-r">06 / 26</div></section>
+
+<div class="which">SLIDE 07 — THE FORMULA'S SHAPE</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>What the formula's shape tells you</h1><div class="goldrule"></div>
+<ul class="points points-wide" style="margin-top:52px">
+<li><strong>The rate and the years do not add — they compound.</strong> Doubling either one does far more than double the ending value once the years are many.</li>
+<li><strong>The formula has no memory of effort.</strong> It does not ask how hard the money was to save. It asks three questions: how much, at what rate, for how long.</li>
+<li><strong>It runs backward too.</strong> Given the ending value you need and the years you have, it tells you the rate that gets you there — this unit uses that direction near its end.</li>
+</ul>
+</div>
+<div class="chrome-r">07 / 26</div></section>
+
+<div class="which">SLIDE 08 — LEVER 1: THE RATE</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>Lever one: the rate</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>Save <strong>$500 a month for forty years</strong>. $240,000 deposited in every case.</li>
+<li>Change only the annual return.</li>
+<li>The return alone separates the three endings by a factor of <strong>more than seven</strong>.</li>
+<li>Whether a return number can be trusted is a question this course takes seriously — starting with how such numbers are measured, in Unit 3.</li>
+</ul>
+<div class="bars">
+<div class="bar"><div class="val">$365k</div><div class="col b2" style="height:41px"></div><div class="cap">2.0%<br>savings account</div></div>
+<div class="bar"><div class="val">$1.5M</div><div class="col" style="height:167px"></div><div class="cap">7.7%<br>60/40, 2005–2026</div></div>
+<div class="bar"><div class="val">$2.7M</div><div class="col" style="height:300px"></div><div class="cap">9.9%<br>S&amp;P 500, 2005–2026</div></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $500/month, 40 years</div>
+<div class="chrome-r">08 / 26</div></section>
+
+<div class="which">SLIDE 09 — LEVER 2: THE YEARS</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>Lever two: the years</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>The cost of delay is heaviest at the front, because the earliest deposits compound the longest.</li>
+<li>Start at 26 instead of 25 — one year of waiting, $3,600 not yet deposited.</li>
+<li>The ending value at 65 drops by about <strong>$67,000</strong>.</li>
+<li>The first year&rsquo;s deposits are the most valuable dollars in the whole plan.</li>
+</ul>
+<div class="tiles">
+<div class="tile"><div class="num">$3,600</div><div class="lab">Not deposited in year one</div><div class="sub">$300/month, one year of waiting</div></div>
+<div class="tile"><div class="num">&minus;$67,000</div><div class="lab">Ending value at 65</div><div class="sub">the cost of that one year, forty years later</div></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $300/month at 7.7%/yr · start 25 vs 26</div>
+<div class="chrome-r">09 / 26</div></section>
+
+<div class="which">SLIDE 10 — CATCHING UP WITH MONEY ALONE</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>Catching up with money alone</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>Suppose the 35-starter wants to reach the 25-starter&rsquo;s $890,000 at 65, at the same 7.7%.</li>
+<li>The required saving is about <strong>$670 a month, for thirty years</strong> — more than double, every month.</li>
+<li>That is what catching up costs when money is the only lever you pull.</li>
+<li>But money is not the only lever. What the second lever — the rate — makes possible is where this unit is headed.</li>
+</ul>
+<div class="tiles">
+<div class="tile"><div class="num">$300/mo</div><div class="lab">From age 25</div><div class="sub">reaches $890,000 at 65, at 7.7%</div></div>
+<div class="tile"><div class="num">$670/mo</div><div class="lab">From age 35, same goal</div><div class="sub">same 7.7% — the price of ten years</div></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py</div>
+<div class="chrome-r">10 / 26</div></section>
+
+<div class="which">SLIDE 11 — MAYA</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Three lives, one formula</div><h1>Maya, 22: starting from zero</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>$300 a month until 65. Each row: her account at 65, and the monthly amount it can then pay her to 95, keeping a fifth in reserve.</li>
+<li>The saving is identical in the three rows; the retirement it buys is not.</li>
+</ul>
+<div class="rows">
+<div class="row"><span class="k">2.0%</span><span class="v">$245,000 &rarr; $800/mo</span><span class="d">savings account</span></div>
+<div class="row"><span class="k">7.7%</span><span class="v">$1,150,000 &rarr; $7,650/mo</span><span class="d">60/40 portfolio, 2005–2026</span></div>
+<div class="row"><span class="k">9.9%</span><span class="v">$2,150,000 &rarr; $18,000/mo</span><span class="d">S&amp;P 500, 2005–2026</span></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $0 start · $300/month · payouts 65 to 95, fifth in reserve</div>
+<div class="chrome-r">11 / 26</div></section>
+
+<div class="which">SLIDE 12 — DANIEL</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Three lives, one formula</div><h1>Daniel, 40: stopping at 60</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>$50,000 saved, $1,000 a month, twenty years to go. Each row: his account at 60, and the monthly payout from there to 95.</li>
+<li>Twenty years is enough for the rate to matter enormously. Whether Daniel can stop at 60 is as much a return question as a savings question.</li>
+</ul>
+<div class="rows">
+<div class="row"><span class="k">2.0%</span><span class="v">$370,000 &rarr; $1,100/mo</span><span class="d">savings account</span></div>
+<div class="row"><span class="k">7.7%</span><span class="v">$770,000 &rarr; $5,100/mo</span><span class="d">60/40 portfolio, 2005–2026</span></div>
+<div class="row"><span class="k">9.9%</span><span class="v">$1,050,000 &rarr; $8,450/mo</span><span class="d">S&amp;P 500, 2005–2026</span></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $50,000 start · $1,000/month · payouts 60 to 95, fifth in reserve</div>
+<div class="chrome-r">12 / 26</div></section>
+
+<div class="which">SLIDE 13 — ROSA</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Three lives, one formula</div><h1>Rosa, 65: the formula backward</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>Rosa retires now with <strong>$1,000,000</strong>. Her question runs the other direction: what can the million pay each month to 95?</li>
+<li>The saving is finished; the return is not. During thirty years of payouts the remaining money keeps compounding, and the rate decides how fast the pot refills as it drains.</li>
+<li>The same million produces three very different retirements.</li>
+</ul>
+<div class="rows">
+<div class="row"><span class="k">2.0%</span><span class="v">$3,400/mo</span><span class="d">savings account</span></div>
+<div class="row"><span class="k">7.7%</span><span class="v">$7,400/mo</span><span class="d">60/40 portfolio, 2005–2026</span></div>
+<div class="row"><span class="k">9.9%</span><span class="v">$9,150/mo</span><span class="d">S&amp;P 500, 2005–2026</span></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $1,000,000 at 65 · payouts to 95, fifth in reserve</div>
+<div class="chrome-r">13 / 26</div></section>
+
+<div class="which">SLIDE 14 — WHAT THE THREE SHARE</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Three lives, one formula</div><h1>What the three cases share</h1><div class="goldrule"></div>
+<ul class="points points-wide" style="margin-top:52px">
+<li><strong>Nobody&rsquo;s outcome was decided by willpower alone.</strong> In every row the deposits were held fixed, and the return moved the result by multiples.</li>
+<li><strong>That is not an argument against saving.</strong> Without Maya&rsquo;s $300 a month there is nothing to compound.</li>
+<li><strong>It is an argument about the return.</strong> The return you accept is a decision with consequences as large as the saving itself — and it deserves the same seriousness.</li>
+</ul>
+</div>
+<div class="chrome-r">14 / 26</div></section>
+
+<div class="which">SLIDE 15 — WHY THE EYE UNDERESTIMATES</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>Why the eye underestimates growth</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>Think back to your guess on slide two. If it came in low, you are in well-documented company.</li>
+<li>People misjudge compound growth in a predictable direction: <strong>we extend curves as if they were straight lines</strong>.</li>
+<li>The research literature calls it exponential growth bias. In household survey data, more-biased households save less, borrow more, and prefer shorter horizons.</li>
+<li>They underweight precisely the quantity this unit is about.</li>
+</ul>
+<div><svg viewBox="0 0 1000 420" width="100%" style="border-left:1px solid var(--paper-3);border-bottom:1px solid var(--paper-3)">
+<line x1="0" y1="420" x2="1000" y2="16" stroke="#4A6B8A" stroke-width="2.6" stroke-dasharray="10 8"/>
+<polyline points="0.0,420.0 25.0,418.3 50.0,416.5 75.0,414.5 100.0,412.4 125.0,410.2 150.0,407.7 175.0,405.1 200.0,402.3 225.0,399.2 250.0,395.9 275.0,392.4 300.0,388.6 325.0,384.4 350.0,380.0 375.0,375.3 400.0,370.1 425.0,364.6 450.0,358.6 475.0,352.2 500.0,345.3 525.0,337.9 550.0,329.9 575.0,321.3 600.0,312.0 625.0,302.0 650.0,291.2 675.0,279.6 700.0,267.1 725.0,253.6 750.0,239.1 775.0,223.5 800.0,206.7 825.0,188.6 850.0,169.1 875.0,148.1 900.0,125.5 925.0,101.1 950.0,74.9 975.0,46.6 1000.0,16.2" fill="none" stroke="#B8902C" stroke-width="2.6"/></svg>
+<div class="legend"><span><span class="dot" style="background:#B8902C"></span>What the account does</span>
+<span><span class="dot" style="background:#4A6B8A"></span>What the eye expects</span></div></div>
+</div></div>
+<div class="chrome-l">Stango &amp; Zinman, Journal of Finance, 2009 · details in this unit&rsquo;s research file</div>
+<div class="chrome-r">15 / 26</div></section>
+
+<div class="which">SLIDE 16 — CALCULATE, DON'T GUESS</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding</div><h1>Calculate rather than guess</h1><div class="goldrule"></div>
+<ul class="points points-wide" style="margin-top:52px">
+<li><strong>Do not trust intuition on compounding questions — trust the formula.</strong> FV = P &times; (1 + r)<sup>n</sup> replaces a guess that is reliably wrong with a calculation that is exactly right.</li>
+<li><strong>Expect the bias to invite two mistakes:</strong> starting later than you should, and treating small differences in the rate as unimportant.</li>
+<li><strong>The bias makes both feel safe. The arithmetic says neither is.</strong></li>
+</ul>
+</div>
+<div class="chrome-r">16 / 26</div></section>
+
+<div class="which">SLIDE 17 — A 1% FEE, FORTY YEARS</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding in reverse</div><h1>A 1% fee, forty years</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>The same mechanism runs against you. A common place to meet it is fees.</li>
+<li>$100,000 at 7.7% for forty years: about <strong>$1,950,000</strong>.</li>
+<li>The same account at 7.7% minus a 1% annual fee — 6.7% net: about <strong>$1,350,000</strong>.</li>
+<li>The fee consumed roughly <strong>31%</strong> of the ending value. Not 1% — 31%.</li>
+</ul>
+<div class="bars">
+<div class="bar"><div class="val">$1.95M</div><div class="col" style="height:300px"></div><div class="cap">no fee<br>7.7%/yr</div></div>
+<div class="bar"><div class="val">$1.35M</div><div class="col neg" style="height:208px"></div><div class="cap">1% annual fee<br>6.7%/yr net</div></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $100,000, 40 years</div>
+<div class="chrome-r">17 / 26</div></section>
+
+<div class="which">SLIDE 18 — WHY SMALL DRAGS COST MULTIPLES</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Compounding in reverse</div><h1>Why small drags cost multiples</h1><div class="goldrule"></div>
+<ul class="points points-wide" style="margin-top:44px">
+<li><strong>The fee removes money that would have compounded for every remaining year.</strong> Early fee dollars are exactly like early deposit dollars — the most powerful in the account — and the fee takes them first.</li>
+<li><strong>Judge any yearly cost the way you judge a yearly return.</strong> A 1% fee against an expected 7.7% return is more than a tenth of it, every year.</li>
+<li><strong>The same logic covers fund expenses, trading costs, idle cash — and debt,</strong> where compounding runs against the borrower. Later units return to it.</li>
+<li><strong>All figures in this unit are before taxes and inflation.</strong> Both take their share; they change the sizes, not the mechanism.</li>
+</ul>
+</div>
+<div class="chrome-r">18 / 26</div></section>
+
+<div class="which">SLIDE 19 — THE MENU OF REAL RATES</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">The menu</div><h1>The menu of real rates</h1><div class="goldrule"></div>
+<table class="mt" style="margin-top:30px">
+<tr><th>Approach</th><th>Average annual return</th><th>Money doubles about every</th></tr>
+<tr><td><strong>The Defender</strong> (2015–2026)</td><td class="num">6.2%</td><td class="num">11.6 years</td></tr>
+<tr><td><strong>60/40 portfolio</strong> (2005–2026)</td><td class="num">7.7%</td><td class="num">9.4 years</td></tr>
+<tr><td><strong>S&amp;P 500, buy and hold</strong> (full history, 1998–2026)</td><td class="num">7.9%</td><td class="num">9.1 years</td></tr>
+<tr><td><strong>The Diversifier</strong> (2015–2026)</td><td class="num">14.1%</td><td class="num">5.1 years</td></tr>
+<tr><td><strong>The Growth Engine</strong> (2015–2026)</td><td class="num">41.8%</td><td class="num">1.7 years</td></tr>
+</table>
+</div>
+<div class="chrome-l">QSL backtests, one engine, one method · qsl-research/demo-strategies/overview-table.md · windows as stated</div>
+<div class="chrome-r">19 / 26</div></section>
+
+<div class="which">SLIDE 20 — READING THE MENU</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">The menu</div><h1>Reading the menu</h1><div class="goldrule"></div>
+<ul class="points points-wide" style="margin-top:44px">
+<li><strong>The span is the point.</strong> Real, rules-based approaches have delivered anywhere from about 6% to about 40% a year over their measured windows.</li>
+<li><strong>This is a first, deliberately partial view.</strong> Averages only; the named strategies travel with you through this course, and their full stories come in later chapters.</li>
+<li><strong>Windows matter.</strong> The higher rows were measured over 2015–2026, an unusually strong period — noticing exactly that is a skill this course teaches.</li>
+<li><strong>And one hint, ahead of its lesson:</strong> a strategy that compounds faster asks more of the investor who holds it. What it asks, and how to judge it, is where this course goes next.</li>
+</ul>
+</div>
+<div class="chrome-r">20 / 26</div></section>
+
+<div class="which">SLIDE 21 — TRADING RATE FOR YEARS</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Catching up</div><h1>Trading rate for years</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>Catching up priced in rate instead of money: still $300 a month, still aiming at the 25-starter&rsquo;s <strong>$890,000</strong> at 65.</li>
+<li>Started at 25, nothing exotic is needed: 7.7% — the conservative end of the menu.</li>
+<li>Started later, the formula names the rate that closes the gap.</li>
+</ul>
+<table class="mt">
+<tr><th>Starting age</th><th>Years</th><th>Required return</th></tr>
+<tr><td class="num">25</td><td>40</td><td class="num">7.7%</td></tr>
+<tr><td class="num">35</td><td>30</td><td class="num">11.9%</td></tr>
+<tr><td class="num">40</td><td>25</td><td class="num">15.5%</td></tr>
+<tr><td class="num">45</td><td>20</td><td class="num">21.6%</td></tr>
+</table>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py · $300/month, target $890,000 at 65</div>
+<div class="chrome-r">21 / 26</div></section>
+
+<div class="which">SLIDE 22 — THE DOOR IS OPEN</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Catching up</div><h1>The required rates are on the menu</h1><div class="goldrule"></div>
+<ul class="points points-wide" style="margin-top:44px">
+<li><strong>11.9% sits below what The Diversifier delivered</strong> over its window. 15.5% is in the neighborhood it occupied. 21.6% is well inside the span up to The Growth Engine.</li>
+<li><strong>None of the required rates is outside what measured, systematic strategies have produced.</strong> The years you no longer have can be traded for a rate the menu shows to be real.</li>
+<li><strong>The higher rows are not picked off a shelf.</strong> They make demands — on method, on discipline, on what you can hold through — and managing those demands is a skill. It is the skill this course exists to teach.</li>
+<li><strong>If you are catching up, your plan depends more on the rate</strong> — which means the work of choosing it carefully is worth more to you, not less. You are in the right place.</li>
+</ul>
+</div>
+<div class="chrome-r">22 / 26</div></section>
+
+<div class="which">SLIDE 23 — THE RULE OF 72</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">A shortcut worth keeping</div><h1>The rule of 72</h1><div class="goldrule"></div>
+<div class="grid2">
+<ul class="points">
+<li>Divide 72 by the annual return in percent: that is, close enough, the years it takes money to double.</li>
+<li>Doubling counts make compounding intuitive. Forty years at 7.7% is about four doublings: 1 &rarr; 2 &rarr; 4 &rarr; 8 &rarr; 16 — landing on each other, nineteen times your money.</li>
+<li>When someone quotes a return, convert it to a doubling time and count doublings across your horizon.</li>
+</ul>
+<div class="rows" style="margin-top:24px">
+<div class="row"><span class="k">2.0%</span><span class="v">72 &divide; 2.0 = 36 years</span><span class="d">exact: 35.0</span></div>
+<div class="row"><span class="k">7.7%</span><span class="v">72 &divide; 7.7 &asymp; 9.4 years</span><span class="d">exact: 9.3</span></div>
+<div class="row"><span class="k">9.9%</span><span class="v">72 &divide; 9.9 &asymp; 7.3 years</span><span class="d">exact: 7.3</span></div>
+</div>
+</div></div>
+<div class="chrome-l">Source: computed in compute_unit1.py</div>
+<div class="chrome-r">23 / 26</div></section>
+
+<div class="which">SLIDE 24 — YOUR OWN NUMBERS</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Hands on</div><h1>Run your own numbers</h1><div class="goldrule"></div>
+<ul class="points points-wide" style="margin-top:44px">
+<li>The QSL compounding simulator runs the exact calculation used throughout this unit — your amounts, your ages, and six return rates from our research, each explained where you see it.</li>
+<li><strong>Run three cases:</strong> your actual situation · your situation had you started five years earlier · your situation with the return one percentage point lower.</li>
+<li>The first tells you where you stand. The second and third teach this unit&rsquo;s two lessons at the only scale that matters — yours.</li>
+</ul>
+</div>
+<div class="chrome-l">Simulator: /compound on the QSL platform</div>
+<div class="chrome-r">24 / 26</div></section>
+
+<div class="which">SLIDE 25 — THE UNIT'S QUESTIONS</div>
+<section class="slide"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Check</div><h1>The unit's questions</h1><div class="goldrule"></div>
+<ul class="points points-wide" style="margin-top:34px">
+<li>Two savers, $300 a month, same return, starting at 25 and 35. The late starter deposited 25% less — how far behind is he at 65?</li>
+<li>A 1% annual fee over forty years at 7.7% — roughly what share of the no-fee ending does it consume?</li>
+<li>At 9.9% a year, about how long does money take to double?</li>
+<li>Matching a 25-starter from age 35 on the same $300 a month — roughly what annual return is required?</li>
+<li>Why does Rosa&rsquo;s same million pay $3,400 a month in one case and $7,400 in another?</li>
+</ul>
+</div>
+<div class="chrome-l">Answers and format per brief.md · interactive quiz built at the platform stage</div>
+<div class="chrome-r">25 / 26</div></section>
+
+<div class="which">SLIDE 26 — CLOSE</div>
+<section class="slide dark"><div class="logo">QSL</div><div class="pad">
+<div class="eyebrow">Unit 1 · What to keep</div>
+<h1>Two levers, both real</h1><div class="goldrule"></div>
+<div class="kp-list">
+<div class="kp"><span class="kp-n">01</span><span class="kp-t">Money that stays invested earns on its own earnings — FV = P &times; (1 + r)&#8319; computes it exactly</span></div>
+<div class="kp"><span class="kp-n">02</span><span class="kp-t">Early in your investing life: time is your lever, and the menu&rsquo;s conservative end is enough</span></div>
+<div class="kp"><span class="kp-n">03</span><span class="kp-t">Starting later: the same arithmetic prices your path — a higher rate closes the gap, and such rates are real</span></div>
+<div class="kp"><span class="kp-n">04</span><span class="kp-t">Choosing that rate well is a skill — the next twenty-six units teach it</span></div>
+</div>
+</div>
+<div class="chrome-l">Next: Unit 2 — AI and Backtest Engines — work with the tools professionals use</div>
+<div class="chrome-r">26 / 26</div></section>
+
+</body></html>

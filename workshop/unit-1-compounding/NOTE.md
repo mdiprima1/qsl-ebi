@@ -1,4 +1,18 @@
-# Unit 1 compounding — five-slide sequence (workshop draft)
+# Unit 1 compounding — full unit (workshop)
+
+**Current state (2026-07-26, end of day):** the authoring workflow ran
+end-to-end on this unit. `manuscript.md` draft 2 **APPROVED by Marco as-is**
+(five-rate menu, catch-up by rate, risk hinted only, constructive close).
+`storyboard.md` maps it to 26 slides; `unit1_deck.html` is the produced
+deck; `narration.md` carries all 26 spoken blocks. Every number from
+`compute_unit1.py` → `data_unit1_compounding.csv` (63 rows) or
+`overview-table.md`. Remaining for promotion/platform: Marco's deck review ·
+interactive quiz + audio (platform Stations 3–4) · module manifest at
+promotion into `modules/ch1-return-and-risk/compounding/`.
+
+---
+
+## Earlier note — five-slide sequence (superseded as unit format; kept as the concept-introduction primitive, deck slides 02/04/06)
 
 **What this is:** the compounding concept introduction for syllabus Unit 1
 ("Compounding — The superpower many forget", Chapter 1), on the five-slide
