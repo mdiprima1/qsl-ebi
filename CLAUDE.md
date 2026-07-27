@@ -1,16 +1,22 @@
 # Instructions for AI agents working in this repository
 
-You are in the **QS Lab EBI Research Package** — the public study pack of the QSL course "Evidence-Based Investing for Everyone." Read `README.md` for the architecture before changing anything.
+You are in the **QS Lab EBI package** — the **public** delivery surface of the QSL course "Evidence-Based Investing for Everyone." Read `README.md` for the architecture before changing anything.
 
-The repository has three zones with different rules. **Know which zone you are in:**
+## Scope (Marco, 2026-07-27) — read this first
+
+**This repository holds only the client-facing tools and the strategies given to students.**
+
+**Course content does not live here. It lives in `qsl-product/EBI Coursecontent/`** — a private repository, so drafts and unfinished units are not public while they are being made. This repository is public: everything pushed to it is visible immediately.
+
+**If you were pointed here to build or brainstorm course material, you are in the wrong repository.** Go to `qsl-product/EBI Coursecontent/`, and read `qsl-hq/Arizona System/README.md` first — Arizona is the system that produces course content, and it enforces the rules that content has to satisfy.
 
 | Zone | What it is | Rules |
 |---|---|---|
 | `strategies/` | Checksummed strategy packages, delivered byte-for-byte | This file, below, + `PACKAGE-SPEC.md`. Strictest zone. |
-| `modules/` | The structured course-content library | `modules/README.md` (template, manifests, status lifecycle) |
-| `workshop/` | Work-in-progress space for creating course material | `workshop/README.md` (three rules, otherwise free) |
+| Client-facing research tools | Things the student receives and runs | Belong here; delivery mechanism not yet fixed |
+| `modules/`, `workshop/` | **Superseded as the content home** (2026-07-27) — earlier material, reference only | **Do not add new course content here** |
 
-If you were pointed here to build or brainstorm course material, work in `workshop/` and read its README first. Never touch `strategies/` in passing.
+Never touch `strategies/` in passing.
 
 ## The one rule that outranks everything (strategies/ zone)
 
