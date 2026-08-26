@@ -8,7 +8,7 @@ You are in the **QS Lab EBI package** — the **public** delivery surface of the
 
 **Course content does not live here. It lives in `qsl-product/EBI Coursecontent/`** — a private repository, so drafts and unfinished units are not public while they are being made. This repository is public: everything pushed to it is visible immediately.
 
-**If you were pointed here to build or brainstorm course material, you are in the wrong repository.** Go to `qsl-product/EBI Coursecontent/`, and read `qsl-hq/Arizona System/README.md` first — Arizona is the system that produces course content, and it enforces the rules that content has to satisfy.
+**If you were pointed here to build or brainstorm course material, you are in the wrong repository.** Go to `qsl-product/EBI Coursecontent/`, and start at Course Builder V10 — `~/PycharmProjects/qsl-coursebuilder-v10` — which is the system that produces course content. **The Arizona system is parked** (Marco, 18 August 2026) and is reference only; the pointer here named it as canonical until 25 August 2026.
 
 | Zone | What it is | Rules |
 |---|---|---|
