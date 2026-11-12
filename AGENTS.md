@@ -56,3 +56,7 @@ Never touch `strategies/` in passing.
 - QSL Lab Reports and the strategy vault, which cite packages by ID · version · sha.
 
 If a task seems to require breaking any rule above, stop and ask.
+
+## Folder owners
+
+`CODEOWNERS` names the team that owns each folder (QSL GitHub Policy rule 5, PL-463). A change in a folder your team does not own is a ticket on the owning team's Linear board.
