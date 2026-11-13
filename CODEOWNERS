@@ -1,7 +1,7 @@
 # Folder owners (QSL GitHub Policy v1.0, rule 5; PL-463, 12 November 2026).
 # Each line names the one team that owns a folder; the last matching line wins. Team names are text: GitHub does not enforce
 # this file on a private repository on the free plan, so it is for agents and people to read. A change in a folder your team
-# does not own is a ticket on the owning team's Linear board. Owners are taken from the team cards in qsl-hq/QSL Agents/teams/.
+# does not own is a ticket on the owning team's Linear board. Owners are taken from the team cards in qsl-hq/agents/teams/.
 # Teams: @ceo @quant-research @content @platform @marketing-bizdev @design @strategy-code @auditor @housekeeper
 #        @course-builder @editor @slide-design @ui
 
