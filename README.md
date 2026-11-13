@@ -18,8 +18,8 @@
 
 The course's defining documents live in the **qsl-hq** hub and are the single source of truth — do not copy them here, link to them:
 
-- **Syllabus:** the course syllabus is kept in QSL's Course Builder. `qsl-hq/strategy/WHERE-WE-ARE.md` names the syllabus of record.
-- **The QSL Strategy Validation Process:** `qsl-hq/QSL VAL/` — start at `VALIDATION-SYSTEM-OVERVIEW.md` (four levels, thirteen tests) and `QSL VAL-Mission.md`.
+- **Syllabus:** the course syllabus is kept in QSL's Course Builder. `qsl-hq/company/where-we-are.md` names the syllabus of record.
+- **The QSL Strategy Validation Process:** `qsl-hq/rules/research/validation/` — start at `VALIDATION-SYSTEM-OVERVIEW.md` (four levels, thirteen tests) and `QSL VAL-Mission.md`.
 
 When a module here *teaches* the syllabus or the validation process, it is a beginner-facing translation of these documents (per the QSL rule that public text translates the standard rather than copying its vocabulary) — the definitions stay canonical in qsl-hq.
 
