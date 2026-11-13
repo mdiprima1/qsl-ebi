@@ -18,7 +18,7 @@
 
 The course's defining documents live in the **qsl-hq** hub and are the single source of truth — do not copy them here, link to them:
 
-- **Syllabus of record:** `qsl-hq/QSL_Syllabus/SYLLABUS.md` — *Evidence-Based Investing for Everyone*, 5 chapters / 27 units (overview: `qsl-hq/QSL_Syllabus/README.md`). This is the latest, signed syllabus.
+- **Syllabus:** the course syllabus is kept in QSL's Course Builder. `qsl-hq/strategy/WHERE-WE-ARE.md` names the syllabus of record.
 - **The QSL Strategy Validation Process:** `qsl-hq/QSL VAL/` — start at `VALIDATION-SYSTEM-OVERVIEW.md` (four levels, thirteen tests) and `QSL VAL-Mission.md`.
 
 When a module here *teaches* the syllabus or the validation process, it is a beginner-facing translation of these documents (per the QSL rule that public text translates the standard rather than copying its vocabulary) — the definitions stay canonical in qsl-hq.
