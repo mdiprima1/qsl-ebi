@@ -1,6 +1,6 @@
 # Strategy catalog
 
-**Repository version: 1.3.2** · One row per package. The fingerprint column shows the display form (first 12 hex characters) of the code file's SHA-256; the full hash is in each package's `manifest.json`.
+**Repository version: 1.6.0** · One row per package. The fingerprint column shows the display form (first 12 hex characters) of the code file's SHA-256; the full hash is in each package's `manifest.json`.
 
 ## Live
 
